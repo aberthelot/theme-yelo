@@ -1,59 +1,9 @@
-/*-------------------------------------------------------------
-Custom Fonts
----------------------------------------------------------------*/
-
-@font-face {
-    font-family: 'open_sansbold';
-    src: url('../font/opensans-bold-webfont.eot');
-    src: url('../font/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/opensans-bold-webfont.woff2') format('woff2'),
-         url('../font/opensans-bold-webfont.woff') format('woff'),
-         url('../font/opensans-bold-webfont.ttf') format('truetype'),
-         url('../font/opensans-bold-webfont.svg#open_sansbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'open_sansregular';
-    src: url('../font/opensans-regular-webfont.eot');
-    src: url('../font/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/opensans-regular-webfont.woff2') format('woff2'),
-         url('../font/opensans-regular-webfont.woff') format('woff'),
-         url('../font/opensans-regular-webfont.ttf') format('truetype'),
-         url('../font/opensans-regular-webfont.svg#open_sansregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-/********************/
-/*     COULEURS     */
-/********************/
-$jaune : #ffdd00;
 
 
-/********************/
-/*     POLICES      */
-/********************/
-$openB: 'open_sansbold', Arial, Helvetica, sans-serif;
-$open: 'open_sansregular', Arial, Helvetica, sans-serif;
-$text: 'open_sansregular', Arial, Helvetica, sans-serif;
+@import "yelo/variables";
+@import "yelo/mixins";
+@import "yelo/fonts";
 
-
-/********************/
-/*     MIXINS      */
-/********************/
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-          border-radius: $radius;
-}
-@mixin opacity($opacity) {
-  opacity: $opacity / 100;
-  filter: alpha(opacity=$opacity);
-}
 
 #wrapper {
 	background: image-url("main-bg.png")  no-repeat center 0px #FFF;
