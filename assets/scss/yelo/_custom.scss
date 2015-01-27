@@ -209,11 +209,7 @@
 								width: 90px;
 								box-shadow: 0 0 0 8px rgba(255,255,255,1);
 								
-								/*@include border-radius('50%');*/
-								  -webkit-border-radius: 50%;
-								 -moz-border-radius: 50%;
-								  -ms-border-radius: 50%;
-									  border-radius: 50%;
+								@include border-radius(50%);
 								
 								-webkit-transition: -webkit-transform 0.2s, box-shadow 0.2s;
 								-moz-transition: -moz-transform 0.2s, box-shadow 0.2s;
@@ -230,11 +226,7 @@
 								height: 90px;
 								width: 90px;
 								
-								/*@include border-radius('50%');*/
-								-webkit-border-radius: 50%;
-								-moz-border-radius: 50%;
-								-ms-border-radius: 50%;
-								border-radius: 50%;
+								@include border-radius(50%);
 								
 								-webkit-transition: -webkit-transform 0.2s, background 0.2s;
 								-moz-transition: -moz-transform 0.2s, background 0.2s;
@@ -294,11 +286,7 @@
 								width: 90px;
 								box-shadow: 0 0 0 8px rgba(255,221,0,1);
 								
-								/*@include border-radius('50%');*/
-								  -webkit-border-radius: 50%;
-								 -moz-border-radius: 50%;
-								  -ms-border-radius: 50%;
-									  border-radius: 50%;
+								@include border-radius(50%);
 								
 								-webkit-transition: -webkit-transform 0.2s, box-shadow 0.2s;
 								-moz-transition: -moz-transform 0.2s, box-shadow 0.2s;
@@ -317,7 +305,7 @@
 								background: $jaune;
 								box-shadow: 0 0 0 8px rgba(255,221,0, 1);
 								
-								/*@include border-radius('50%');*/
+								@include border-radius(50%);
 								-webkit-border-radius: 50%;
 								-moz-border-radius: 50%;
 								-ms-border-radius: 50%;

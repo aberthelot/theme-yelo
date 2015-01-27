@@ -1,7 +1,83 @@
-@import "bootstrap/bootstrap";
-@import "bootstrap/responsive";
 
-@import "yelo/variables";
-@import "yelo/mixins";
 @import "yelo/fonts";
+
+// BOOTSTRAP RESPONSIVE ------------------ //
+// À la place de @import "bootstrap/bootstrap";
+// Cela permet de surcharger les variables et les mixins de Bootstrap dans l'ordre souhaité
+// --------------------------------------- //
+// Core variables
+@import "bootstrap/variables";
+// Surcharge des variables dans un fichier distinct
+@import "yelo/variables";
+// Core mixins
+@import "bootstrap/mixins";
+// Surcharge des mixins dans un fichier distinct
+@import "yelo/mixins";
+// CSS Reset
+@import "bootstrap/reset";
+// Grid system and page structure
+@import "bootstrap/scaffolding";
+@import "bootstrap/grid";
+@import "bootstrap/layouts";
+// Base CSS
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/forms";
+@import "bootstrap/tables";
+// Components: common
+@import "bootstrap/sprites";
+@import "bootstrap/dropdowns";
+@import "bootstrap/wells";
+@import "bootstrap/component-animations";
+@import "bootstrap/close";
+// Components: Buttons & Alerts
+@import "bootstrap/buttons";
+@import "bootstrap/button-groups";
+@import "bootstrap/alerts"; // Note: alerts share common CSS with buttons and thus have styles in buttons
+// Components: Nav
+@import "bootstrap/navs";
+@import "bootstrap/navbar";
+@import "bootstrap/breadcrumbs";
+@import "bootstrap/pagination";
+@import "bootstrap/pager";
+// Components: Popovers
+@import "bootstrap/modals";
+@import "bootstrap/tooltip";
+@import "bootstrap/popovers";
+// Components: Misc
+@import "bootstrap/thumbnails";
+@import "bootstrap/media";
+@import "bootstrap/labels-badges";
+@import "bootstrap/progress-bars";
+@import "bootstrap/accordion";
+@import "bootstrap/carousel";
+@import "bootstrap/hero-unit";
+// Utility classes
+@import "bootstrap/utilities"; // Has to be last to override when necessary
+
+
+// BOOTSTRAP RESPONSIVE ------------------ //
+// À la place de @import "bootstrap/responsive";
+// Cela évite de refaire appel aux variables et mixins de Bootstrap
+// --------------------------------------- //
+// RESPONSIVE CLASSES
+// ------------------
+@import "bootstrap/responsive-utilities";
+// MEDIA QUERIES
+// ------------------
+// Large desktops
+@import "bootstrap/responsive-1200px-min";
+// Tablets to regular desktops
+@import "bootstrap/responsive-768px-979px";
+// Phones to portrait tablets and narrow desktops
+@import "bootstrap/responsive-767px-max";
+// RESPONSIVE NAVBAR
+// ------------------
+// From 979px and below, show a button to toggle navbar contents
+@import "bootstrap/responsive-navbar";
+
+
+
+
+
 @import "yelo/custom";
