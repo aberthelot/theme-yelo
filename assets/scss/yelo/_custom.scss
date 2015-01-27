@@ -1,0 +1,449 @@
+#wrapper {
+	background: image-url("main-bg.png")  no-repeat center 0px #FFF;
+    min-height: 900px;
+}
+
+.container {
+	header > div {
+		margin: 0;
+	}
+    h1 {
+		position: relative;
+		min-height: 75px;
+		padding: 10px 200px 10px 0;
+		margin: 0;
+		z-index: 0;
+		font-weight:normal;
+		
+		span {
+			font-family: $open;
+			font-weight: normal;
+			font-size: 2.3rem;
+			line-height: 2rem;
+			margin-left: 0;
+			margin-top: 5px;
+			padding-right: 10px;
+			float: left;
+			width: 25%;
+			text-align: right;
+			
+			&:after {
+				content: " sur";
+				font-size: 1.5rem;
+				display: block;
+			}
+		}
+		strong {
+			font-family: $openB;
+			font-size: 3.2rem;
+			line-height: 3rem;
+			float: left;
+			width: 73%;
+		}
+		
+		&:before {
+			content: "";
+			background: image-url("yelo.png") top right no-repeat;
+			width: 163px;
+			height: 145px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: -1;
+		}
+    }
+    #content-wrapper {
+    	background: image-url("content-bg.png") left top;
+		display: block;
+		
+		#content {
+			overflow: hidden;
+
+			.yelo-retour-home {
+				color: #000;
+				font-size: 13px;
+				font-weight: 300;
+				height: 56px;
+				padding-top: 25px;
+			}
+	
+			#identification {
+				background-image: image-url("content-intro-identification-avatar-bg.png");
+				background-repeat: no-repeat;
+				background-position: 0px 0px;
+				overflow: hidden;
+				
+				> * {
+					padding-left: 115px;
+				}
+			}
+	
+			h2 {
+				font-family: $openB;
+				font-size: 2rem;
+				font-weight: normal;
+			}
+	
+			p {
+				font-family: $text;
+				color: #777;
+			}
+	
+			#deplacements {
+				margin-bottom: 70px;
+	
+				h3 {
+					font-size: 1.5rem;
+					font-family: $text;
+					padding-left: 34px;
+					padding-bottom: 10px;
+					background-image: image-url("content-creation-title-bar-bg.png");
+					background-repeat: no-repeat;
+					background-position: left bottom;
+				}
+	
+				> div.elementNav {
+					text-align: center;
+					max-width: 50%;
+					min-width: 25%;
+					float: left;
+					position: relative;
+					z-index: 0;
+					margin-bottom: 20px;
+
+					> div.picto {
+						position: relative;
+						width: 90px;
+						display: block;
+						margin: 0 auto;
+						float: none;
+						overflow: visible;
+						
+						/* picto retirer blanc */
+						a.moins {
+							display:none;
+							width: 21px;
+							height: 21px;
+							background: image-url("moins.png") no-repeat;
+							position: absolute;
+							top: 70px;
+							right: 0;
+							z-index: 3;
+						}
+						
+						a {
+							display: block;
+							color: #000;
+							text-decoration: none;
+							
+							> div {
+								position: relative;
+								height: 90px;
+								width: 90px;
+								margin: 0 0 8px 0;
+								
+								&#picto-bus {
+									background: image-url('picto-bus.svg') no-repeat center center;
+								}	
+								&#picto-velo {
+									background: image-url('picto-velo.svg') no-repeat center center;
+								}
+								&#picto-alerte {
+									background: image-url('picto-alerte.svg') no-repeat center center;
+								}
+								&#picto-voiture {
+									background: image-url('picto-voiture.svg') no-repeat center center;
+								}
+							}
+							
+							span.texte {
+								padding-top: 10px;
+								line-height: 1.1rem;
+								display: block;
+							}
+						}
+						
+						
+						/****************************/
+						/*           TOOLTIP        */
+						/****************************/
+						.tooltip {
+							z-index: 1000;
+							font-size: 0.9rem;
+							line-height: 1rem;
+							top: auto;
+							bottom: 0;
+							@include opacity(100);
+							
+						}
+						.tooltip-inner {
+						  	color: #000;
+						  	white-space: nowrap;
+						}
+					}
+					
+					
+					
+					/**** Le service n'est pas activé ****/
+					> div.pictoOf {						
+						/* picto ajout jaune */
+						.plus {
+							width: 21px;
+							height: 21px;
+							background: image-url("plus.png") no-repeat;
+							position: absolute;
+							top: 70px;
+							right: 0;
+							z-index: 3;
+						}
+						
+						a > div {
+							/* gros filet */
+							&:before {
+								content: "";
+								position: absolute;
+								z-index: -1;
+								top: 0;
+								left: 0;
+								height: 90px;
+								width: 90px;
+								box-shadow: 0 0 0 8px rgba(255,255,255,1);
+								
+								/*@include border-radius('50%');*/
+								  -webkit-border-radius: 50%;
+								 -moz-border-radius: 50%;
+								  -ms-border-radius: 50%;
+									  border-radius: 50%;
+								
+								-webkit-transition: -webkit-transform 0.2s, box-shadow 0.2s;
+								-moz-transition: -moz-transform 0.2s, box-shadow 0.2s;
+								transition: transform 0.2s, box-shadow 0.2s;
+							}
+							
+							/* fond blanc */
+							&:after {
+								content: "";
+								position: absolute;
+								z-index: -1;
+								top:0;
+								left: 0;
+								height: 90px;
+								width: 90px;
+								
+								/*@include border-radius('50%');*/
+								-webkit-border-radius: 50%;
+								-moz-border-radius: 50%;
+								-ms-border-radius: 50%;
+								border-radius: 50%;
+								
+								-webkit-transition: -webkit-transform 0.2s, background 0.2s;
+								-moz-transition: -moz-transform 0.2s, background 0.2s;
+								transition: transform 0.2s, background 0.2s;
+							}
+						}
+						
+						/***** Effets *****/
+						a:hover > div {
+							&:after {
+								background: #fff;
+								
+								-webkit-transform: scale(0.90);
+								-moz-transform: scale(0.90);
+								-ms-transform: scale(0.90);
+								transform: scale(0.90);
+							}
+							&:before {
+								box-shadow: 0 0 0 8px rgba(255,255,255, 0.85);
+								
+								-webkit-transform: scale(1.20);
+								-moz-transform: scale(1.20);
+								-ms-transform: scale(1.20);
+								transform: scale(1.20);
+							}
+						}
+						
+						
+						/****************************/
+						/*      TOOLTIP JAUNE       */
+						/****************************/
+						.tooltip {
+							&.bottom .tooltip-arrow {
+								border-bottom-color: $jaune;
+							}
+						}
+						.tooltip-inner {
+						  background-color: $jaune;
+						}
+					}
+					
+					
+					/**** Le service est activé ****/
+					> div.pictoOn {
+						.plus {
+							display:none;
+						}
+						a > div {
+							/* gros filet */
+							&:before {
+								content: "";
+								position: absolute;
+								z-index: -1;
+								top: 0;
+								left: 0;
+								height: 90px;
+								width: 90px;
+								box-shadow: 0 0 0 8px rgba(255,221,0,1);
+								
+								/*@include border-radius('50%');*/
+								  -webkit-border-radius: 50%;
+								 -moz-border-radius: 50%;
+								  -ms-border-radius: 50%;
+									  border-radius: 50%;
+								
+								-webkit-transition: -webkit-transform 0.2s, box-shadow 0.2s;
+								-moz-transition: -moz-transform 0.2s, box-shadow 0.2s;
+								transition: transform 0.2s, box-shadow 0.2s;
+							}
+							
+							/* fond jaune */
+							&:after {
+								content: "";
+								position: absolute;
+								z-index: -1;
+								top:0;
+								left: 0;
+								height: 90px;
+								width: 90px;
+								background: $jaune;
+								box-shadow: 0 0 0 8px rgba(255,221,0, 1);
+								
+								/*@include border-radius('50%');*/
+								-webkit-border-radius: 50%;
+								-moz-border-radius: 50%;
+								-ms-border-radius: 50%;
+								border-radius: 50%;
+								
+								-webkit-transition: -webkit-transform 0.2s, box-shadow 0.2s;
+								-moz-transition: -moz-transform 0.2s, box-shadow 0.2s;
+								transition: transform 0.2s, box-shadow 0.2s;
+							}
+						}
+						
+						/***** Effets *****/
+						a:hover {							
+							> div {
+								&:after {	
+									box-shadow: 0 0 0 1px rgba(255,221,0, 0);
+																
+									-webkit-transform: scale(0.90);
+									-moz-transform: scale(0.90);
+									-ms-transform: scale(0.90);
+									transform: scale(0.90);
+								}
+								&:before {
+									box-shadow: 0 0 0 8px rgba(255,221,0, 0.85);
+									
+									-webkit-transform: scale(1.20);
+									-moz-transform: scale(1.20);
+									-ms-transform: scale(1.20);
+									transform: scale(1.20);
+								}
+							}
+						}
+						&:hover {
+							.moins {
+								display:block;
+							}
+						}
+						
+						
+						/****************************/
+						/*      TOOLTIP BLANC       */
+						/****************************/
+						.tooltip {
+							&.bottom .tooltip-arrow {
+								border-bottom-color: #fff;
+							}
+						}
+						.tooltip-inner {
+						  background-color: #fff;
+						}
+					}
+				}
+			}
+		}
+    }
+    #footer {
+    		background: image-url("content-bg.png")left top;
+    		height: 55px;
+    		-webkit-border-radius: 0 0 0 24px;
+    		border-radius: 0 0 0 24px;
+
+    		img {
+    			position: relative;
+    			left: 75%;
+    		}
+    }
+    #CDA {
+    	background: image-url("CDA-larochelle.jpg") no-repeat bottom right;
+    	height: 70px;
+    }
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+
+	.container h1 span {
+		font-size: 77%;
+		line-height: 77%;
+		width: 30%;
+		margin-top: 15px;
+	}
+	.container h1 strong {
+		font-size: 95%;
+		line-height: 90%;
+		width: 68%;
+	}
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.container h1 {
+		padding: 40px 10px 10px 0px;
+	}
+	.container h1:before {
+		background-size: 75%;
+	}
+	.container h1 span, .container h1 strong {
+		float: none;
+		display: block;
+		width: 100%;
+		text-align: left;
+	}
+	.container h1 span {
+		font-size: 77%;
+		margin-top: 0;
+	}
+	.container h1 strong {
+		font-size: 95%;
+		line-height: 95%;
+	}
+	.container h1 span:after {
+		text-align: left;
+		display: inline;
+	}
+	.container #content-wrapper #content .yelo-retour-home {
+		padding-left: 25px;
+	}
+	.container #content-wrapper #content #identification {
+		padding: 20px 20px 0 20px;
+		background-position: 20px 0px;
+	}
+	.container #content-wrapper #content #deplacements {
+		padding: 0 20px;
+	}
+	.container #content-wrapper #content #deplacements > div.elementNav {
+		margin-bottom: 80px;
+		min-width: 50%;
+	}
+}
