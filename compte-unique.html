@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://yelo.agglo-larochelle.fr/yelo-theme/images/favicon.ico">
+
+    <title>Compte Unique</title>
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/app.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div id="wrapper">
+    
+	<div class="container">
+		<header class="row">
+        	<div>
+        		<h1><span>Bienvenue</span> <strong>Mes services en ligne</strong></h1>
+            </div>
+        </header>
+        
+        <main class="row" id="content-wrapper">
+        	<div id="content">
+                <nav class="yelo-retour-home span11 offset1"> 
+                    Retour sur <a href="http://yelo.agglo-larochelle.fr">yelo.agglo-larochelle.fr</a>
+                </nav>
+            
+                <section id="identification" class="span11 offset1">
+                    <h2>Tableau de bord</h2>
+                    <p>Bonjour Pierre Dupont</p>
+                    <p><a href="#">Gérer mon profil</a></p>
+                </section>
+                
+                
+                <section id="deplacements" class=" span11 offset1">
+                   <h3>Mes déplacements</h3>
+                   
+                   <div class="elementNav">
+                        <div class="picto pictoOf">
+                        	<a href="#" data-toggle="tooltip" title="Activer le service" 
+                            data-placement="bottom" id="bus">
+                            	<div id="picto-bus"></div>
+                                <span class="plus"></span>
+                                <span class="texte">Abonnement de bus</span>
+                            </a>
+                                                        
+                            <a href="#" data-toggle="tooltip" title="Désactiver le service" 
+                            data-placement="bottom" class="moins"></a>
+                        </div>
+                   </div>
+                    
+                   <div class="elementNav">
+                       <div class="picto pictoOf">
+                       		<a href="#" data-toggle="tooltip" title="Activer le service" 
+                            data-placement="bottom" id="velo">
+                            	<div id="picto-velo"></div>
+                                <span class="plus"></span>
+                                <span class="texte">Libre-service vélo</span>
+                            </a>
+                            <a href="#" data-toggle="tooltip" title="Désactiver le service" 
+                            data-placement="bottom" class="moins"></a>
+                        </div>
+                   </div>
+                   
+                   <div class="elementNav">
+                        <div class="picto pictoOf">
+                        	<a href="#" data-toggle="tooltip" title="Activer le service" 
+                            data-placement="bottom" id="alerte">
+                            	<div id="picto-alerte"></div>
+                                <span class="plus"></span>
+                                <span class="texte">Alerte bus</span>
+                            </a>
+                            <a href="#" data-toggle="tooltip" title="Désactiver le service" 
+                            data-placement="bottom" class="moins"></a>
+                        </div>
+                   </div>
+                   
+                   <div class="elementNav">
+                        <div class="picto pictoOn">
+                            <a href="#" data-toggle="tooltip" title="Accéder au service" 
+                            data-placement="bottom" id="voiture">
+                            	<div id="picto-voiture"></div>
+                                <span class="plus"></span>
+                                <span class="texte">Libre-service voiture</span>
+                            </a>
+                            <a href="#" data-toggle="tooltip" title="Désactiver le service" 
+                            data-placement="bottom" class="moins"></a>
+                        </div>
+                   </div>
+               </section>
+           </div>
+		</main>
+        
+        <footer>
+            <div id="footer" class="row"><img src="assets/img/arbres-footer.png" alt="" /></div>
+            <div id="CDA" class="row"></div>
+        </footer>
+	</div>
+</div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    
+    <script type="text/javascript">
+	$( document ).ready(function() {
+		$('.picto > a').tooltip();
+		$('.plus').tooltip();
+		$('.moins').tooltip();
+	});
+
+
+$(document).ready(function() {
+  	  $('body').addClass('js');
+		  var $menu = $('#menu'),
+		  	  $menulink = $('.menu-link'),
+		  	  $menuTrigger = $('.has-subnav > a');
+		
+		$menulink.click(function(e) {
+			e.preventDefault();
+			$menulink.toggleClass('active');
+			$menu.toggleClass('active');
+		});
+		
+		$menuTrigger.click(function(e) {
+			e.preventDefault();
+			var $this = $(this);
+			$this.toggleClass('active').next('ul').toggleClass('active');
+		});
+		
+		});	
+    </script>
+</body>
+</html>
