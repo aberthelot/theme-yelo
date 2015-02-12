@@ -1,8 +1,16 @@
+
+
 #mb-block {
 	legend {
+    border-bottom: 0px;
     font-family: $openB;
     font-size: 1rem;
-    line-height: 1rem;
+    line-height: 2.5rem;
+    // height: 60px;
+    @include bg-stripe;
+    background-repeat-x: repeat;
+    background-repeat-y: no-repeat;
+    background-position-y: bottom;
   }
   label {
     color: #717171;
@@ -10,5 +18,63 @@
     font-size: 0.8rem;
     font-style: italic;
     line-height: 0.8rem;
+  }
+}
+
+ul#mb-search-results-list,
+ul.mb-results-infos,
+ul.mb-results-modes,
+ul.mb-results-misc {
+  @include list-unstyled;
+}
+
+ul#mb-search-results-list {
+  
+  li.mb-search-result {
+
+    @include li-alternate-color($yelo-list-color-light-even, $yelo-list-color-light-odd);
+
+    ul.mb-results-modes {
+      li.mb-mode {
+        display: inline-block;
+      }
+    }
+    ul.mb-results-infos {
+      
+    }
+  }
+}
+
+.mb-mode-bus {
+  font: normal normal normal 14px FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  &:before {
+    background: $yelo-first-color;
+      font-size: 2em;
+      height: 0;
+      padding-bottom: 100%;
+      text-align: center;
+      width: 100%;
+      @include border-radius(50%);
+    content: "\f207";
+    
+  }
+}
+
+
+#mb-resume-content {
+  // background-color: red;
+}
+
+#mb-departure-field {
+  legend {
+    @include font-awesome($fa-flag, $yelo-color-green);
+  }
+}
+
+#mb-destination-field {
+  legend {
+    @include font-awesome($fa-flag-checkered, $yelo-color-red);
   }
 }

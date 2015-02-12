@@ -260,11 +260,11 @@
 						/****************************/
 						.tooltip {
 							&.bottom .tooltip-arrow {
-								border-bottom-color: $jaune;
+								border-bottom-color: $yelo-first-color;
 							}
 						}
 						.tooltip-inner {
-						  background-color: $jaune;
+						  background-color: $yelo-first-color;
 						}
 					}
 					
@@ -302,7 +302,7 @@
 								left: 0;
 								height: 90px;
 								width: 90px;
-								background: $jaune;
+								background: $yelo-first-color;
 								box-shadow: 0 0 0 8px rgba(255,221,0, 1);
 								
 								@include border-radius(50%);

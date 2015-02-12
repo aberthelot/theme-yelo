@@ -1,3 +1,209 @@
+
+
+
+ul.list-delimited-light {
+  margin: 0;
+  > li {
+    @include padding-block-width;
+    @include padding-light-block-height;
+    margin: 0;
+    background-color: $yelo-color-white;
+    // @include li-alternate-color ($yelo-list-color-light-even, $yelo-list-color-light-odd);
+    border-top: 1px dotted $yelo-color-black;
+    // @include li-separate-color ($yelo-list-border-color-light-even, $yelo-list-border-color-light-odd);
+  }
+}
+
+// ul.list-alternate > li {
+//   @include li-alternate-color ($yelo-list-color-light-even, $yelo-list-color-light-odd);
+// }
+
+// ul.list-separate > li {
+//   @include li-separate-color ($yelo-list-border-color-light-even, $yelo-list-border-color-light-odd);
+// }
+
+.block-quick {
+  h3 {
+    background-image: image-url("bg-stripe.png");
+    background-repeat-x: repeat;
+    background-repeat-y: no-repeat;
+    background-position-y: bottom;
+    font-family: $openB;
+    font-size: 20px;
+  }
+  .btn {
+    padding-right: 8px;
+  }
+  .content-quick {
+    i {
+      // font-size: 10px;
+    }
+  }
+}
+
+.block-primary {
+  header {
+    border-top: 4px solid $yelo-light-color;
+    border-left: 4px solid $yelo-light-color;
+    border-radius: 10px 0 0 0;
+  }
+  h3 {
+    background-color: white;
+    bottom: 1rem;
+    font-family: $open;
+    line-height: 1.5rem;
+    margin: 0 0 0 20px;
+    padding-bottom: 0px;
+    padding-left: 4px;
+    position: relative;
+  }
+  footer {
+    background-color: $yelo-first-color;
+    height: 30px;
+    line-height: 2rem;
+    position: relative;
+    @include bg-stripe;
+    @include border-radius-bottom-left($yelo-border-radius);
+    @include padding-block-width;
+    a {
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+    a.btn-yelo {
+      background-color: $yelo-color-black;
+      bottom: 0;
+      color: $yelo-color-white;
+      font-family: $openB;
+      font-size: 18px;
+      position: absolute;
+      right: 20px;
+      text-transform: none;
+      @include padding-block-width;
+      @include padding-block-height;
+      @include border-radius-top($yelo-border-radius);
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.block-secondary {
+  @include bg-stripe;
+  @include border-radius($yelo-border-radius);
+  h3 {
+    color: $yelo-color-gray-hardest;
+    font-family: $openB;
+    font-size: 18px;
+    margin-bottom: 0;
+    @include padding-block-width;
+  // }
+
+  // h3 {
+    bottom: 20px;
+    left: -6px;
+    padding: 0;
+    position: relative;
+  }
+
+  p {
+    @include padding-block-height;
+    @include padding-block-width
+  }
+  footer {
+    background-color: $yelo-light-color;
+    border-top: 4px solid $yelo-color-white;
+    line-height: 2rem;
+    text-align: right;
+    @include bg-stripe;
+    @include border-radius-bottom-right($yelo-border-radius);
+    @include padding-block-width;
+
+    a {
+      color: $yelo-color-black;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+
+.tags {
+  background-color: $yelo-first-color;
+  font-size: 12px;
+  text-transform: uppercase;
+  @include bg-stripe;
+  @include padding-light-block-height;
+  @include padding-light-block-width;
+}
+
+section {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  // border: 1px solid $yelo-light-color;
+}
+
+.bg-stripe {
+  @include bg-stripe;
+}
+
+.infos-trafic {
+  // margin: 0;
+  h4 {
+    color: $yelo-color-gray-hardest;
+    font-family: $openB;
+    font-size: 14px;
+  }
+  // a {
+  //   color: $yelo-color-black;
+  //   text-decoration: none;
+  // }
+  section {
+    margin: 0;
+  }
+  p {
+    color: $yelo-color-gray-harder;
+    font-family: $open;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.accounts {
+  background-color: $yelo-color-gray-lightest;
+  // h3 {
+  //   bottom: 20px;
+  //   left: -6px;
+  //   padding: 0;
+  //   position: relative;
+  // }
+  p {
+    color: $yelo-color-gray-hardest;
+    font-family: $open;
+    font-size: 13px;
+  }
+  a {
+  }
+}
+
+.news {
+  h4 {
+    color: $yelo-color-gray-hardest;
+    font-family: $open;
+    font-size: 16px;
+  }
+  p {
+    color: $yelo-color-gray-harder;
+    font-family: $open;
+    font-size: 12px;
+  }
+}
+
 .directs {
   li {
     box-sizing: border-box;
@@ -14,7 +220,7 @@
       width: 100%;
     }
     div.circle-img {
-      background: $first-color;
+      background: $yelo-first-color;
       font-size: 2em;
       height: 0;
       padding-bottom: 100%;

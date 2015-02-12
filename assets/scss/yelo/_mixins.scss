@@ -9,6 +9,93 @@
   -ms-border-radius: $radius;
   border-radius: $radius;
 }
+@mixin border-radius-top($radius) {
+
+}
+@mixin border-radius-top($radius) {
+  @include border-radius-top-left($radius);
+  @include border-radius-top-right($radius);
+}
+@mixin border-radius-bottom($radius) {
+  @include border-radius-bottom-left($radius);
+  @include border-radius-bottom-right($radius);
+}
+@mixin border-radius-top-left($radius) {
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-radius-topleft: $radius;
+  border-top-left-radius: $radius;
+}
+@mixin border-radius-top-right($radius) {
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-radius-topright: $radius;
+  border-top-right-radius: $radius;
+}
+@mixin border-radius-bottom-left($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  -moz-border-radius-bottomleft: $radius;
+  border-bottom-left-radius: $radius;
+}
+@mixin border-radius-bottom-right($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  -moz-border-radius-bottomright: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin bg-stripe {
+  background-image: image-url("bg-stripe.png");
+}
+
+@mixin list-unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+@mixin font-awesome($icon, $color) {
+  &:before {
+    color: $color;
+    content: $icon;
+    font: normal normal normal 18px FontAwesome;
+    padding-right: 10px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@mixin li-alternate-color ($color-even, $color-odd) {
+  &:nth-child(even) {
+    background-color: $color-even;
+  }
+  &:nth-child(odd) {
+    background-color: $color-odd;
+  }
+}
+
+@mixin li-separate-color ($color-even, $color-odd) {
+  &:nth-child(even) {
+    border-bottom: 1px solid $color-even;
+  }
+  &:nth-child(odd) {
+    border-bottom: 1px solid $color-odd;
+  }
+}
+
+@mixin padding-light-block-width {
+  padding-left: $yelo-padding-light-block-width;
+  padding-right: $yelo-padding-light-block-width;
+}
+@mixin padding-light-block-height {
+  padding-bottom: $yelo-padding-light-block-height;
+  padding-top: $yelo-padding-light-block-height;
+}
+
+@mixin padding-block-width {
+  padding-left: $yelo-padding-block-width;
+  padding-right: $yelo-padding-block-width;
+}
+@mixin padding-block-height {
+  padding-bottom: $yelo-padding-block-height;
+  padding-top: $yelo-padding-block-height;
+}
 
 // @mixin opacity($opacity) {
 //   opacity: $opacity / 100;

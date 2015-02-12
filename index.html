@@ -9,6 +9,7 @@
   <!-- Custom styles for this template -->
   <link href="assets/css/app.css" rel="stylesheet">
   <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
+  
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -66,14 +67,280 @@
             <div class="row">
               <!-- Itinéraires -->
               <div class="span8">
-                <h3>Itinéraires</h3>
+                <section class="block-primary">
+                  <header>
+                    <h3>Itinéraire</h3>
+                  </header>
+                  <p>Recherche d'itinéraire, selon un point de départ, un point d'arrivée et de multiples critères.</p>
+                  <div>
+                    <div id="collapseItineraire" class="accordion-body collapse">
+                      <div class="accordion-inner">
+                        <div id="mb-block">
+                          <div id="mb-iti-search-block">
+                            <p class="mandatory-info"><span class="mandatory">*</span> obligatoire</p>
+                            <div id="mb-iti-bloc-slogan"></div>
+                            <form method="get" name="iti-search" id="mb-iti-search-form" target="" action="">
+                              <fieldset id="mb-departure-field">
+                                <legend>Départ</legend>
+                                <div class="mb-bloc-inline-fields">
+                                  <span class="mb-field-line">
+                                    <label for="mb-DepartureCityName">Commune <span class="mandatory">*</span></label>
+                                    <input id="mb-DepartureCityName" class="mb-entrypoint" type="text" name="DepartureCityName" value="">
+                                  </span>
+                                  <span class="mb-field-line">
+                                    <label for="mb-DepartureLibelle">Adresse, Arrêt, Lieu</label>
+                                    <input id="mb-DepartureLibelle" class="mb-entrypoint" type="text" name="DepartureLibelle" value="">
+                                  </span>
+                                  <input type="hidden" id="mb-Departure" name="Departure" value="">
+                                  <input type="hidden" id="mb-edtDeparture" class="mb-edtDeparture" name="edtDeparture" value="">
+                                </div>
+                              </fieldset>
+                              <fieldset id="mb-destination-field">
+                                <legend>Arrivée</legend>
+                                <div class="mb-bloc-inline-fields">
+                                  <span class="mb-field-line">
+                                    <label for="mb-DestinationCityName">Commune <span class="mandatory">*</span></label>
+                                    <input id="mb-DestinationCityName" class="mb-entrypoint" type="text" name="DestinationCityName" value="">
+                                  </span>
+                                  <span class="mb-field-line">
+                                    <label for="mb-DestinationLibelle">Adresse, Arrêt, Lieu</label>
+                                    <input id="mb-DestinationLibelle" class="mb-entrypoint" type="text" name="DestinationLibelle" value="">
+                                  </span>
+                                  <input type="hidden" id="mb-Destination" name="Destination" value="">
+                                  <input type="hidden" id="mb-edtDestination" class="mb-edtDestination" name="edtDestination" value="">
+                                </div>
+                              </fieldset>
+                              <fieldset>
+                                <legend>Quand ?</legend>
+                                <div class="mb-bloc-inline-fields">
+                                  <span class="mb-field-line">
+                                    <label for="mb-dateDay">Date <span class="mandatory">*</span></label>
+                                    <select name="dateDay" id="mb-dateDay">
+                                      <option label="1" value="1">1</option>
+                                      <option label="2" value="2">2</option>
+                                      <option label="3" value="3">3</option>
+                                      <option label="4" value="4">4</option>
+                                      <option label="5" value="5">5</option>
+                                      <option label="6" value="6">6</option>
+                                      <option label="7" value="7">7</option>
+                                      <option label="8" value="8">8</option>
+                                      <option label="9" value="9">9</option>
+                                      <option label="10" value="10">10</option>
+                                      <option label="11" value="11">11</option>
+                                      <option label="12" value="12">12</option>
+                                      <option label="13" value="13">13</option>
+                                      <option label="14" value="14">14</option>
+                                      <option label="15" value="15">15</option>
+                                      <option label="16" value="16">16</option>
+                                      <option label="17" value="17">17</option>
+                                      <option label="18" value="18">18</option>
+                                      <option label="19" value="19">19</option>
+                                      <option label="20" value="20">20</option>
+                                      <option label="21" value="21">21</option>
+                                      <option label="22" value="22">22</option>
+                                      <option label="23" value="23">23</option>
+                                      <option label="24" value="24">24</option>
+                                      <option label="25" value="25">25</option>
+                                      <option label="26" value="26">26</option>
+                                      <option label="27" value="27">27</option>
+                                      <option label="28" value="28">28</option>
+                                      <option label="29" value="29">29</option>
+                                      <option label="30" value="30" selected="selected">30</option>
+                                      <option label="31" value="31">31</option>
+                                    </select>
+                                    <select name="dateYearMonth" id="mb-dateYearMonth">
+                                      <option label="janvier 2015" value="1|2015" selected="selected">janvier 2015</option>
+                                      <option label="février 2015" value="2|2015">février 2015</option>
+                                      <option label="mars 2015" value="3|2015">mars 2015</option>
+                                    </select>
+                                  </span>
+                                  <span class="mb-field-line" id="heure">
+                                    <label for="mb-hour">Heure <span class="mandatory">*</span></label>
+                                    <div id="time">
+                                      <div class="select-1">
+                                        <select id="mb-sens" name="sens">
+                                          <option value="1">Partir après</option>
+                                          <option value="-1">Arriver avant</option>
+                                        </select>
+                                      </div>
+                                      <div class="select-2">
+                                        <select name="hour" id="mb-hour">
+                                          <option label="00" value="0">00</option>
+                                          <option label="01" value="1">01</option>
+                                          <option label="02" value="2">02</option>
+                                          <option label="03" value="3">03</option>
+                                          <option label="04" value="4">04</option>
+                                          <option label="05" value="5">05</option>
+                                          <option label="06" value="6">06</option>
+                                          <option label="07" value="7">07</option>
+                                          <option label="08" value="8">08</option>
+                                          <option label="09" value="9">09</option>
+                                          <option label="10" value="10">10</option>
+                                          <option label="11" value="11" selected="selected">11</option>
+                                          <option label="12" value="12">12</option>
+                                          <option label="13" value="13">13</option>
+                                          <option label="14" value="14">14</option>
+                                          <option label="15" value="15">15</option>
+                                          <option label="16" value="16">16</option>
+                                          <option label="17" value="17">17</option>
+                                          <option label="18" value="18">18</option>
+                                          <option label="19" value="19">19</option>
+                                          <option label="20" value="20">20</option>
+                                          <option label="21" value="21">21</option>
+                                          <option label="22" value="22">22</option>
+                                          <option label="23" value="23">23</option>
+                                        </select>
+                                        <span class="strong">h</span>
+                                        <select name="minute" id="mb-minute">
+                                          <option label="00" value="0">00</option>
+                                          <option label="05" value="5">05</option>
+                                          <option label="10" value="10">10</option>
+                                          <option label="15" value="15">15</option>
+                                          <option label="20" value="20">20</option>
+                                          <option label="25" value="25">25</option>
+                                          <option label="30" value="30">30</option>
+                                          <option label="35" value="35">35</option>
+                                          <option label="40" value="40" selected="selected">40</option>
+                                          <option label="45" value="45">45</option>
+                                          <option label="50" value="50">50</option>
+                                          <option label="55" value="55">55</option>
+                                        </select>
+                                        <span class="strong">min</span>
+                                      </div>
+                                    </div>
+                                  </span>
+                                </div>
+                              </fieldset>
+                              <div id="mb-iti-bloc-details">
+                                <fieldset>
+                                  <legend>Trajet</legend>
+                                  <div class="bloc-fields">
+                                    <span>
+                                      <select id="mb-criteria_" name="criteria">
+                                        <option value="1" selected="selected"> Le plus rapide </option>
+                                        <option value="2"> Le moins de correspondance </option>
+                                        <option value="3"> Le moins de marche à pied </option>
+                                      </select>
+                                    </span>
+                                  </div>
+                                </fieldset>
+                                <div>
+                                  <input type="hidden" id="mb-selectWalkSpeed" name="selectWalkSpeed" value="60">
+                                </div>
+                                <fieldset>
+                                  <legend>Modes de transport</legend>
+                                  <div class="mb-bloc-inline-fields">
+                                    <span>
+                                      <input type="checkbox" name="Mode[]" id="mb-mode-car" value="car" checked="checked"> car
+                                      <input type="checkbox" name="Mode[]" id="mb-mode-bus" value="bus" checked="checked"> bus
+                                      <input type="checkbox" name="Mode[]" id="mb-mode-tramway" value="tramway" checked="checked"> tramway
+                                      <input type="checkbox" name="Mode[]" id="mb-mode-train" value="train" checked="checked"> train
+                                      <input type="checkbox" name="Mode[]" id="mb-mode-tgv" value="tgv" checked="checked"> tgv
+                                      <input type="checkbox" name="Mode[]" id="mb-mode-bateau" value="bateau" checked="checked"> bateau
+                                      <input type="checkbox" name="Mode[]" id="mb-mode-avion" value="avion" checked="checked"> avion
+                                    </span>
+                                  </div>
+                                </fieldset>
+                              </div>
+                              <div class="mb-bloc-inline-fields mb-bloc-submit">
+                                <span class="mb-line-button">
+                                  <input type="button" id="mb-iti-search-btn" value="Rechercher">
+                                </span>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <footer>
+                        <a class="btn-yelo" data-toggle="collapse" href="#collapseItineraire">
+                          <i class="fa fa-flag-checkered fa-lg"></i> Itinéraire
+                        </a>
+                    </footer>
+                  </div>
+
+                </section>
+
+
+
+
+
+
+
+
               </div>
               <!-- /Itinéraires -->
-              <!-- Alertes -->
+
+
+
+              <!-- Infos trafic -->
               <div class="span4">
-                <h3>Infos trafic</h3>
+
+                <section class="block-quick">
+                  <header>
+                    <h3>
+                      <i class="fa fa-search"></i>
+                      Recherche
+                    </h3>
+                  </header>
+                  <div class="content-quick">
+                    <div class="input-append">
+                      <input class="input-block-level" id="appendedInputButton" type="text">
+                      <button class="btn btn-inverse" type="button"><i class="fa fa-search"></i></button>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="block-secondary infos-trafic">
+                  <header>
+                    <h3>
+                     <span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-warning fa-stack-1x fa-inverse"></i>
+                      </span>
+                      Infos trafic
+                    </h3>
+                  </header>
+                  <ul class="unstyled list-delimited-light">
+                    <li>
+                      <section>
+                        <a href="">
+                          <span class="tags">Mobilité</span>
+                          <h4>Déblocage du dépôt de bus</h4>
+                          <p>Aujourd'hui mardi 3 février, le tribunal ordonne la libération immédiate du dépôt de bus.</p>
+                        </a>
+                      </section>
+                    </li>
+                    <li>
+                      <section>
+                        <a href="">
+                          <span class="tags">Grève</span>
+                          <h4>Déblocage du dépôt de bus</h4>
+                          <p>Aujourd'hui mardi 3 février, le tribunal ordonne la libération immédiate du dépôt de bus.</p>
+                        </a>
+                      </section>
+                    </li>
+                  </ul>
+                  <footer>
+                    \\ <a href="">Toutes les infos trafic</a>
+                    \\ <a href="">S'inscrire aux alertes</a>
+                  </footer>
+                </section>
+
+                <section class="block-quick">
+                  <header>
+                    <h3>
+                      <i class="fa fa-phone"></i>
+                      Nous contacter
+                    </h3>
+                  </header>
+                  <div class="content-quick">
+                    <img src="assets/img/azur.png" alt="">
+                  </div>
+                </section>
+
               </div>
-              <!-- /Alertes -->
+              <!-- /Infos trafic -->
             </div>
             <div class="row">
               <!-- Accès directs -->
@@ -104,64 +371,107 @@
               <!-- /Accès directs -->
               <!-- Abonnements -->
               <div class="span4">
-                <h3>Abonnements</h3>
+                <section class="block-secondary accounts">
+                  <header>
+                    <h3>
+                      <span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+                      </span>
+                      Abonnements
+                    </h3>
+                    <p>
+                      Je modifie mes informations personnelles, je gère mes abonnements et mes liaisons.
+                    </p>
+                  </header>
+                  <footer>
+                    \\ <a href="">S'identifier</a>
+                  </footer>
+                </section>
+                <section class="block-primary">
+                  <header>
+                    <h3>Trouver les stations les plus proches</h3>
+                  </header>
+                  <footer>
+                      <a class="btn-yelo" data-toggle="collapse" href="#collapseItineraire">
+                        <i class="fa fa-search fa-lg"></i> Rechercher
+                      </a>
+                  </footer>
+                </section>
               </div>
               <!-- /Abonnements -->
             </div>
             <div class="row">
               <!-- Actualités -->
               <div class="span8">
-                <h3>Actualités</h3>
-                <ul class="unstyled">
-                  <li>
-                    <div class="row-fluid">
-                      <div class="span3">
-                        <img src="" alt="">
+                <section class="block-primary news">
+                  <header>
+                    <h3>Actualités</h3>
+                  </header>
+                  <ul class="unstyled">
+                    <li>
+                      <div class="row-fluid">
+                        <div class="span3">
+                          <img src="" alt="">
+                        </div>
+                        <div class="span9">
+                          <span class="tags">Mobilité</span>
+                          <h4>Navettes Atlantique Stade Rochelais</h4>
+                          <div>Publiée le 27 août 2014</div>
+                          <p>Nouveauté à partir du 24 janvier : garez-vous au P+R Jean Moulin et montez dans la navette P3 !</p>
+                        </div>
                       </div>
-                      <div class="span9">
-                        <div>Mobilité</div>
-                        <h4>Navettes Atlantique Stade Rochelais</h4>
-                        <div>Publiée le 27 août 2014</div>
-                        <p>Nouveauté à partir du 24 janvier : garez-vous au P+R Jean Moulin et montez dans la navette P3 !</p>
+                    </li>
+                    <li>
+                      <div class="row-fluid">
+                        <div class="span3">
+                          <img src="" alt="">
+                        </div>
+                        <div class="span9">
+                          <span class="tags">Mobilité</span>
+                          <h4>Navettes Atlantique Stade Rochelais</h4>
+                          <div>Publiée le 27 août 2014</div>
+                          <p>Nouveauté à partir du 24 janvier : garez-vous au P+R Jean Moulin et montez dans la navette P3 !</p>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="row-fluid">
-                      <div class="span3">
-                        <img src="" alt="">
-                      </div>
-                      <div class="span9">
-                        <div>Mobilité</div>
-                        <h4>Navettes Atlantique Stade Rochelais</h4>
-                        <div>Publiée le 27 août 2014</div>
-                        <p>Nouveauté à partir du 24 janvier : garez-vous au P+R Jean Moulin et montez dans la navette P3 !</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div></div>
-                    <h4></h4>
-                    <p></p>
-                  </li>
-                  <li>
-                    <div></div>
-                    <h4></h4>
-                    <p></p>
-                  </li>
-                </ul>
+                    </li>
+                    <li>
+                      <div></div>
+                      <h4></h4>
+                      <p></p>
+                    </li>
+                    <li>
+                      <div></div>
+                      <h4></h4>
+                      <p></p>
+                    </li>
+                  </ul>
+                  <footer>
+                    <span>
+                      <a href=""><i class="fa fa-rss"></i> RSS</a>
+                    </span>
+                    <span class="pull-right">
+                      \\ <a href="">Toutes les actus.</a>
+                    </span>
+                  </footer>
+                </section>
               </div>
               <!-- /Actualités -->
               <!-- Yélo institutionnel -->
               <div class="span4">
-                <h3>Yélo</h3>
-                <ul class="fa-ul">
-                  <li><a href=""><i class="fa-li fa fa-institution"></i> Une marque</a></li>
-                  <li><a href=""><i class="fa-li fa fa-newspaper-o"></i> Une carte</a></li>
-                  <li><a href=""><i class="fa-li fa fa-heart"></i> Des services</a></li>
-                  <li><a href=""><i class="fa-li fa fa-sitemap"></i> Un réseau</a></li>
-                  <li><a href=""><i class="fa-li fa fa-cubes"></i> Des opérateurs</a></li>
-                </ul>
+                <section class="block-primary">
+                  <header>
+                    <h3>Yélo</h3>
+                  </header>
+                  <ul class="fa-ul">
+                    <li><a href=""><i class="fa-li fa fa-institution"></i> Une marque</a></li>
+                    <li><a href=""><i class="fa-li fa fa-newspaper-o"></i> Une carte</a></li>
+                    <li><a href=""><i class="fa-li fa fa-heart"></i> Des services</a></li>
+                    <li><a href=""><i class="fa-li fa fa-sitemap"></i> Un réseau</a></li>
+                    <li><a href=""><i class="fa-li fa fa-cubes"></i> Des opérateurs</a></li>
+                  </ul>
+                  <footer> </footer>
+                </section>
               </div>
               <!-- /Yélo institutionnel -->
             </div>
@@ -177,7 +487,7 @@
       <!-- Bootstrap core JavaScript
       ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
       <script src="assets/js/bootstrap.min.js"></script>
       <script src="assets/js/bootstrap-tooltip.js"></script>
       <script src="assets/js/bootstrap-collapse.js"></script>

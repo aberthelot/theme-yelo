@@ -18,11 +18,19 @@ module.exports = function (grunt) {
           imagesDir: 'assets/img'
         }
       }
+    },
+    watch: {
+      css: {
+        files: ['assets/scss/**/*.scss'],
+        tasks: ['default']
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
+  grunt.registerTask('dev', ['watch']);
   grunt.registerTask('default', ['compass:dev']);
 
 };

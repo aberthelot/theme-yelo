@@ -1,11 +1,48 @@
 /********************/
-/*     COULEURS     */
+/*     COULEURS
 /********************/
-$jaune : #ffdd00;
+$yelo-color-white: #FFFFFF;
+$yelo-color-black: #000000;
+$yelo-color-yellow: #FFDD00;
+$yelo-color-green: #388E3C;
+$yelo-color-red: #C62828;
+// Les gris "souris"
+$yelo-color-gray-lightest: #F3F3F3;
+$yelo-color-gray-lighter: #E5E5E5;
+$yelo-color-gray-normal: #777777;
+$yelo-color-gray-harder: #494949;
+$yelo-color-gray-hardest: #333333;
+//
+$yelo-color-gray-annex: #65696C;
+//
+$yelo-first-color: $yelo-color-yellow;
+$yelo-light-color: $yelo-color-gray-lightest;
 
-$first-color: $jaune;
+
+$yelo-border-radius: 12px;
+
+$yelo-list-color-light-even: $yelo-color-white;
+$yelo-list-color-light-odd: $yelo-color-gray-lightest;
+$yelo-list-border-color-light-even: $yelo-color-gray-lightest;
+$yelo-list-border-color-light-odd: $yelo-color-gray-normal;
 
 
-
+/********************/
+/*     SURCHARGES BOOTSTRAP
+/********************/
 $baseFontFamily: $text !default;
+$linkColor: $yelo-color-black;
 // $headingsColor: green;
+
+
+$yelo-padding-light-block-width: 6px;
+$yelo-padding-light-block-height: 2px;
+$yelo-padding-block-width: 12px;
+$yelo-padding-block-height: 4px;
+
+
+$fa-flag: "\f024";
+$fa-flag-checkered: "\f11e";
+$fa-flag-o: "\f11d";
+$fa-user: "\f007";
+$fa-warning: "\f071";
