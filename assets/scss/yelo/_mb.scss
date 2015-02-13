@@ -1,5 +1,12 @@
 
 
+.mb-result-head-1,
+#mb-pagin-top h3 {
+  color: $yelo-color-gray-normal;
+  display: none;
+  font-family: $open;
+}
+
 #mb-block {
 	legend {
     border-bottom: 0px;
@@ -14,25 +21,80 @@
   }
   label {
     color: #717171;
-    font-family: $open;
+    font-family: $openB;
     font-size: 0.8rem;
     font-style: italic;
     line-height: 0.8rem;
   }
 }
 
+#mb-resume-content {
+  ul {
+    @include list-unstyled;
+  }
+}
+
 ul#mb-search-results-list,
+ul#mb-resume,
 ul.mb-results-infos,
 ul.mb-results-modes,
 ul.mb-results-misc {
   @include list-unstyled;
+  color: $yelo-color-gray-harder;
+  font-family: $open;
+  font-size: 13px;
+  span {
+    color: $yelo-color-gray-hardest;
+    font-family: $openB;
+  }
 }
 
-ul#mb-search-results-list {
-  
-  li.mb-search-result {
+#mb-search-results-block-list {
+  padding-bottom: 80px;
+  position: relative;
+  #mb-pagin-top {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 24px;
+    a {
+      background-color: $yelo-second-color;
+      background-image: image-url("bg-stripe.png");
+      display: block;
+      font-family: $openB;
+      font-size: 16px;
+      width: 100%;
+      @include padding-block-width;
+      @include padding-block-height;
+      margin-bottom: 16px;
+    }
+    .mb-results-list-next {
+      text-align: right;
+      // right: 0;
+    }
+  }
+  h2, h3 {
+    color: $yelo-color-black;
+    font-family: $open;
+    @include padding-block-width;
+  }
+  h2 {
+    background-color: $yelo-first-color;
+    background-image: image-url("bg-stripe.png");
+    font-size: 22px;
+  }
+}
 
-    @include li-alternate-color($yelo-list-color-light-even, $yelo-list-color-light-odd);
+
+ul#mb-search-results-list {
+  li.mb-search-result {
+  @include padding-block-width;
+  @include padding-block-height;
+    background-color: $yelo-color-gray-lightest;
+    background-image: image-url("bg-stripe.png");
+    // border: 1px dotted $yelo-color-gray-harder;
+    margin-bottom: 24px;
+    // @include li-alternate-color($yelo-list-color-light-even, $yelo-list-color-light-odd);
 
     ul.mb-results-modes {
       li.mb-mode {
@@ -42,26 +104,94 @@ ul#mb-search-results-list {
     ul.mb-results-infos {
       
     }
+    p {
+      margin-bottom: 0;
+    }
   }
 }
 
+.mb-mode span {
+  background-color: $yelo-first-color;
+  padding-right: 4px;
+  margin-right: 4px;
+}
+
+.mb-mode-bus,
+.mb-mode-Train,
+.mb-mode-bus,
+.mb-mode-bus,
 .mb-mode-bus {
-  font: normal normal normal 14px FontAwesome;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
   &:before {
-    background: $yelo-first-color;
-      font-size: 2em;
-      height: 0;
-      padding-bottom: 100%;
-      text-align: center;
-      width: 100%;
-      @include border-radius(50%);
-    content: "\f207";
-    
+    font: normal normal normal 14px FontAwesome;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;  
+  }
+}
+.mb-mode-bus {
+  &:before {
+    content: "\f207"; 
+  }
+}
+.mb-mode-Train {
+  &:before {
+    content: "\f238"; 
   }
 }
 
+li.mb-mode {
+  &:not(:last-child) {
+    // background-color: pink;
+    &:after {
+      font: normal normal normal 14px FontAwesome;
+      padding-left: 4px;
+      padding-right: 4px;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      content: "\f054";
+    }
+  }
+}
+
+.mb-results-goto,
+.mb-result-actions {
+  background-color: $yelo-color-black;
+  font-family: $openB;
+  font-size: 16px;
+  text-align: center;
+  @include padding-block-width;
+  @include padding-block-height;
+  a {
+    color: $yelo-color-white;
+    display: inline-block;
+    text-decoration: none;
+    &:hover {
+      // background-color: $yelo-color-gray-lighter;
+      color: $yelo-color-gray-normal;
+    }
+  }
+}
+
+#mb-results-infos-hourdeparture,
+#mb-resume-departure {
+  span:first-child {
+    @include font-awesome($fa-flag-checkered, $yelo-color-red);
+  }
+}
+
+#mb-results-infos-hourarrival,
+#mb-resume-arrival {
+  span:first-child {
+    @include font-awesome($fa-flag, $yelo-color-green);
+  }
+}
+
+#mb-results-infos-totalduration {
+  span {
+    @include font-awesome($fa-clock-o, $yelo-color-black);
+  }
+}
 
 #mb-resume-content {
   // background-color: red;

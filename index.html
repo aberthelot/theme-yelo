@@ -279,7 +279,9 @@
                 <section class="block-quick">
                   <header>
                     <h3>
-                      <i class="fa fa-search"></i>
+                      <span class="fa-stack">
+                        <i class="fa fa-search fa-stack-1x"></i>
+                      </span>
                       Recherche
                     </h3>
                   </header>
@@ -327,31 +329,27 @@
                   </footer>
                 </section>
 
-                <section class="block-quick">
-                  <header>
-                    <h3>
-                      <i class="fa fa-phone"></i>
-                      Nous contacter
-                    </h3>
-                  </header>
-                  <div class="content-quick">
-                    <img src="assets/img/azur.png" alt="">
-                  </div>
-                </section>
-
               </div>
               <!-- /Infos trafic -->
             </div>
             <div class="row">
               <!-- Accès directs -->
               <div class="span8">
-                <div class="directs">
-                  <h3 class="visible-desktop">Accès directs</h3>
+                <section class="block-primary directs">
+                  <header>
+                    <h3 class="visible-desktop">Accès directs</h3>
+                  </header>
                   <ul class="unstyled inline">
                     <li>
                       <div class="circle"></div>
                       <div class="circle-img"><i class="fa fa-bus"></i></div>
-                      <div class="circle-txt">Bus</div>
+                      <div class="circle-txt">
+                        Bus
+<!--                         <ul>
+                          <li>Horaires des bus</li>
+                          <li></li>
+                        </ul> -->
+                      </div>
                     </li><li>
                       <div class="circle"></div>
                       <div class="circle-img"><i class="fa fa-car"></i></div>
@@ -366,7 +364,8 @@
                       <div class="circle-txt">Autres</div>
                     </li>
                   </ul>
-                </div>
+                  <footer></footer>
+                </section>
               </div>
               <!-- /Accès directs -->
               <!-- Abonnements -->
@@ -388,6 +387,21 @@
                     \\ <a href="">S'identifier</a>
                   </footer>
                 </section>
+
+                <section class="block-quick">
+                  <header>
+                    <h3>
+                      <i class="fa fa-phone"></i>
+<!--                       <div class="circle"></div>
+                      <div class="circle-img"></div> -->
+                      Nous contacter
+                    </h3>
+                  </header>
+                  <div class="content-quick">
+                    <img src="assets/img/azur.png" alt="">
+                  </div>
+                </section>
+
                 <section class="block-primary">
                   <header>
                     <h3>Trouver les stations les plus proches</h3>
@@ -398,6 +412,7 @@
                       </a>
                   </footer>
                 </section>
+
               </div>
               <!-- /Abonnements -->
             </div>
@@ -477,17 +492,36 @@
             </div>
           </main>
 
-          <footer>
-            <div id="footer" class="row"><img src="assets/img/arbres-footer.png" alt="" /></div>
-            <div id="CDA" class="row"></div>
+        <div class="row-fluid">
+          <footer class="footer-page">
+<!--             <div id="footer" class="row"><img src="assets/img/arbres-footer.png" alt="" /></div>
+            <div id="CDA" class="row"></div> -->
+
+            <div class="row">
+              <div class="span12">Communauté d'agglomération de La Rochelle</div>
+            </div>
+            <div class="row">
+              <div class="span4">
+                
+              </div>
+              <div class="span4"></div>
+              <div class="span4"></div>
+            </div>
+
+
           </footer>
+          
+        </div>
+
         </div>
       </div>
+
+
 
       <!-- Bootstrap core JavaScript
       ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
-      <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <script src="assets/js/bootstrap.min.js"></script>
       <script src="assets/js/bootstrap-tooltip.js"></script>
       <script src="assets/js/bootstrap-collapse.js"></script>

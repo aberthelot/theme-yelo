@@ -1,5 +1,10 @@
 
 
+.footer-page {
+  background-color: $yelo-color-gray-harder;
+}
+
+
 
 ul.list-delimited-light {
   margin: 0;
@@ -28,9 +33,15 @@ ul.list-delimited-light {
     background-repeat-x: repeat;
     background-repeat-y: no-repeat;
     background-position-y: bottom;
+    // display:inline-block;
     font-family: $openB;
     font-size: 20px;
   }
+    i {
+      background-image: image-url("bg-stripe.png");
+      @include border-radius(50%);
+      // font-size: 20px;
+    }
   .btn {
     padding-right: 8px;
   }
