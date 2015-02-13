@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TEST Marque blanche</title>
+
+    <script src="http://motoka-ws.ctp.prod.canaltp.fr/msw/mswloader/mswid/e883490f2ffbb6cd23eba0c2bf4e0068/sRestrict/MSW_MarqueBlanche/" type="text/javascript"></script>
+
+  </head>
+  <body onload="onLoadBody()">
+    <h1>TEST Marque blanche</h1>
+    <div id="mb-block"></div>
+  </body>
+  <script>
+    function onLoadBody() {
+      var mb_options = {
+        'actionActiv': false
+      }
+      var mb = new MswMarqueBlanche({
+        'css': 'http://localhost:8080/mtk_mblanche.css',
+        //
+        'criteriaActiv': true,
+        'criteriaInputType': 'select',
+        'criteriaList': {'1': 'Le plus rapide', '2': 'Le moins de correspondance', '3': 'Le moins de marche à pied'},
+        //
+        'modeActiv': true,
+        'mode': {
+          'car':'coach',
+          'bus':'bus',
+          'train':'RapidTransit;Train;LocalTrain;LongDistanceTrain',
+          'bateau':'Ferry;Waterborne'
+        },
+        'modeInputType': 'checkbox',
+        //
+        'deptCityInputValue': 'La Rochelle'
+        //
+        // 'walkSpeedActiv': true,
+        // 'walkSpeed': 60,
+        // 'walkSpeedList': {'test1': 40, 'test2': 60, 'test3': 80}
+      });
+      mb.buildMBlanche('mb-block', mb_options);
+    }
+  </script>
+</html>

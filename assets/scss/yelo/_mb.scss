@@ -6,6 +6,16 @@
   display: none;
   font-family: $open;
 }
+.mb-bloc-inline-fields {
+  font-family: $openB;
+  font-size: 13px;
+}
+  // input#id-mb-mode-tramway
+  // #id-mb-mode-tgv,
+  // #id-mb-mode-avion
+  input[value=tramway] {
+    display: none;
+  }
 
 #mb-block {
 	legend {
