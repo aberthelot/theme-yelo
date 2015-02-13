@@ -36,10 +36,12 @@ $linkColor: $yelo-color-black;
 // $headingsColor: green;
 
 
-$yelo-padding-light-block-width: 6px;
-$yelo-padding-light-block-height: 2px;
-$yelo-padding-block-width: 12px;
-$yelo-padding-block-height: 4px;
+$yelo-padding-small-block-width: 6px;
+$yelo-padding-small-block-height: 2px;
+$yelo-padding-medium-block-width: 12px;
+$yelo-padding-medium-block-height: 4px;
+$yelo-padding-large-block-width: 12px;
+$yelo-padding-large-block-height: 24px;
 
 
 $fa-clock-o: "\f017";
@@ -47,5 +49,6 @@ $fa-history: "\f1da";
 $fa-flag: "\f024";
 $fa-flag-checkered: "\f11e";
 $fa-flag-o: "\f11d";
+$fa-search: "\f002";
 $fa-user: "\f007";
 $fa-warning: "\f071";

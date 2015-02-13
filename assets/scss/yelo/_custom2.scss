@@ -9,8 +9,8 @@
 ul.list-delimited-light {
   margin: 0;
   > li {
-    @include padding-block-width;
-    @include padding-light-block-height;
+    @include padding-medium-block-width;
+    @include padding-small-block-height;
     margin: 0;
     background-color: $yelo-color-white;
     // @include li-alternate-color ($yelo-list-color-light-even, $yelo-list-color-light-odd);
@@ -75,7 +75,7 @@ ul.list-delimited-light {
     position: relative;
     @include bg-stripe;
     @include border-radius-bottom-left($yelo-border-radius);
-    @include padding-block-width;
+    @include padding-medium-block-width;
     a {
       font-size: 11px;
       text-transform: uppercase;
@@ -89,8 +89,8 @@ ul.list-delimited-light {
       position: absolute;
       right: 20px;
       text-transform: none;
-      @include padding-block-width;
-      @include padding-block-height;
+      @include padding-medium-block-width;
+      @include padding-medium-block-height;
       @include border-radius-top($yelo-border-radius);
       &:hover {
         text-decoration: none;
@@ -107,7 +107,7 @@ ul.list-delimited-light {
     font-family: $openB;
     font-size: 18px;
     margin-bottom: 0;
-    @include padding-block-width;
+    @include padding-medium-block-width;
   // }
 
   // h3 {
@@ -118,8 +118,8 @@ ul.list-delimited-light {
   }
 
   p {
-    @include padding-block-height;
-    @include padding-block-width
+    @include padding-medium-block-height;
+    @include padding-medium-block-width
   }
   footer {
     background-color: $yelo-light-color;
@@ -128,7 +128,7 @@ ul.list-delimited-light {
     text-align: right;
     @include bg-stripe;
     @include border-radius-bottom-right($yelo-border-radius);
-    @include padding-block-width;
+    @include padding-medium-block-width;
 
     a {
       color: $yelo-color-black;
@@ -145,8 +145,8 @@ ul.list-delimited-light {
   font-size: 12px;
   text-transform: uppercase;
   @include bg-stripe;
-  @include padding-light-block-height;
-  @include padding-light-block-width;
+  @include padding-small-block-height;
+  @include padding-small-block-width;
 }
 
 section {

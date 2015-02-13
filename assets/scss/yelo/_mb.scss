@@ -9,13 +9,56 @@
 .mb-bloc-inline-fields {
   font-family: $openB;
   font-size: 13px;
+  text-transform: capitalize;
 }
-  // input#id-mb-mode-tramway
-  // #id-mb-mode-tgv,
-  // #id-mb-mode-avion
-  input[value=tramway] {
-    display: none;
+
+.mb-bloc-submit {
+  @include padding-large-block-height;
+  text-align: center;
+}
+
+// #mb-iti-search-btn {
+.mb-line-button {
+
+  background-color: $yelo-color-black;
+
+  
+
+  
+  display: block;
+  
+  
+  // position: absolute;
+  // right: 20px;
+  text-transform: none;
+  @include padding-medium-block-width;
+  @include padding-medium-block-height;
+  @include border-radius($yelo-border-radius);
+
+  // &:hover {
+  //   text-decoration: none;
+  // }
+  line-height: 28px;
+  
+  // width: 100%;
+
+  #mb-iti-search-btn {
+    background-color: $yelo-color-black;
+    border: 0;
+    color: $yelo-color-white;
+    font-family: $openB;
+    font-size: 18px;
+    padding: 0;
   }
+}
+
+.mb-line-button {
+  @include font-awesome($fa-search, $yelo-color-white);
+  &:before {
+    display: inline;
+    padding-right: 0;
+  }
+}
 
 #mb-block {
 	legend {
@@ -74,8 +117,8 @@ ul.mb-results-misc {
       font-family: $openB;
       font-size: 16px;
       width: 100%;
-      @include padding-block-width;
-      @include padding-block-height;
+      @include padding-medium-block-width;
+      @include padding-medium-block-height;
       margin-bottom: 16px;
     }
     .mb-results-list-next {
@@ -86,7 +129,7 @@ ul.mb-results-misc {
   h2, h3 {
     color: $yelo-color-black;
     font-family: $open;
-    @include padding-block-width;
+    @include padding-medium-block-width;
   }
   h2 {
     background-color: $yelo-first-color;
@@ -98,8 +141,8 @@ ul.mb-results-misc {
 
 ul#mb-search-results-list {
   li.mb-search-result {
-  @include padding-block-width;
-  @include padding-block-height;
+  @include padding-medium-block-width;
+  @include padding-medium-block-height;
     background-color: $yelo-color-gray-lightest;
     background-image: image-url("bg-stripe.png");
     // border: 1px dotted $yelo-color-gray-harder;
@@ -170,8 +213,8 @@ li.mb-mode {
   font-family: $openB;
   font-size: 16px;
   text-align: center;
-  @include padding-block-width;
-  @include padding-block-height;
+  @include padding-medium-block-width;
+  @include padding-medium-block-height;
   a {
     color: $yelo-color-white;
     display: inline-block;
