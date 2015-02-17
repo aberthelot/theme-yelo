@@ -96,8 +96,7 @@
                                   <input type="hidden" id="mb-Departure" name="Departure" value="">
                                   <input type="hidden" id="mb-edtDeparture" class="mb-edtDeparture" name="edtDeparture" value="">
                                 </div>
-                              </fieldset>
-                              <fieldset id="mb-destination-field">
+                              </fieldset><fieldset id="mb-destination-field">
                                 <legend>Arrivée</legend>
                                 <div class="mb-bloc-inline-fields">
                                   <span class="mb-field-line">
@@ -225,11 +224,7 @@
                                       </select>
                                     </span>
                                   </div>
-                                </fieldset>
-                                <div>
-                                  <input type="hidden" id="mb-selectWalkSpeed" name="selectWalkSpeed" value="60">
-                                </div>
-                                <fieldset>
+                                </fieldset><div><input type="hidden" id="mb-selectWalkSpeed" name="selectWalkSpeed" value="60"></div><fieldset>
                                   <legend>Modes de transport</legend>
                                   <div class="mb-bloc-inline-fields">
                                     <span>
@@ -275,7 +270,7 @@
               <!-- Infos trafic -->
               <div class="span4">
 
-                <section class="block-quick">
+                <section class="block-quick hidden-phone">
                   <header>
                     <h3>
                       <span class="fa-stack">
@@ -336,7 +331,7 @@
               <div class="span8">
                 <section class="block-primary directs">
                   <header>
-                    <h3 class="visible-desktop">Accès directs</h3>
+                    <h3 class="hidden-phone">Accès directs</h3>
                   </header>
                   <ul class="unstyled inline">
                     <li>
@@ -365,25 +360,8 @@
               <!-- /Accès directs -->
               <!-- Abonnements -->
               <div class="span4">
-                <section class="block-secondary accounts">
-                  <header>
-                    <h3>
-                      <span class="fa-stack">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-user fa-stack-1x fa-inverse"></i>
-                      </span>
-                      Abonnements
-                    </h3>
-                    <p>
-                      Je modifie mes informations personnelles, je gère mes abonnements et mes liaisons.
-                    </p>
-                  </header>
-                  <footer>
-                    \\ <a href="">S'identifier</a>
-                  </footer>
-                </section>
 
-                <section class="block-quick">
+                <section class="block-quick hidden-phone">
                   <header>
                     <h3>
                       <i class="fa fa-phone"></i>
@@ -412,10 +390,10 @@
             <div class="row">
               <!-- Actualités -->
               <div class="span8">
-                <section class="block-primary news">
-                  <header>
+                <section class="block-primary news bg-stripe">
+                  <!-- <header> -->
                     <h3>Actualités</h3>
-                  </header>
+                  <!-- </header> -->
                   <ul class="unstyled list-delimited-light">
                     <li>
                       <div class="row-fluid">
@@ -427,6 +405,7 @@
                           <h4>Résultats du concours photos</h4>
                           <div>Publiée le 15 janvier 2015</div>
                           <p class="teasing">La Communauté d'Agglomération a lancé lors de la semaine de la mobilité son premier concours photos « Mon vélo et l'agglo ». Ce concours était une invitation à mettre en scène son vélo sur le territoire de l'agglomération de façon originale, artistique, ou de manière à dénoncer des comportements ou des infrastructures inadaptées aux cyclistes.</p>
+                          <p><a href="">Lire toute l'actualité</a></p>
                         </div>
                       </div>
                     </li>
@@ -458,19 +437,6 @@
               <!-- /Actualités -->
               <!-- Yélo institutionnel -->
               <div class="span4">
-                <section class="block-primary">
-                  <header>
-                    <h3>Yélo</h3>
-                  </header>
-                  <ul class="fa-ul">
-                    <li><a href=""><i class="fa-li fa fa-institution"></i> Une marque</a></li>
-                    <li><a href=""><i class="fa-li fa fa-newspaper-o"></i> Une carte</a></li>
-                    <li><a href=""><i class="fa-li fa fa-heart"></i> Des services</a></li>
-                    <li><a href=""><i class="fa-li fa fa-sitemap"></i> Un réseau</a></li>
-                    <li><a href=""><i class="fa-li fa fa-cubes"></i> Des opérateurs</a></li>
-                  </ul>
-                  <footer> </footer>
-                </section>
               </div>
               <!-- /Yélo institutionnel -->
             </div>
@@ -521,7 +487,7 @@
                 <ul class="fa-ul">
                   <li><a href=""><i class="fa-li fa fa-home"></i> Accueil</a></li>
                   <li><a href=""><i class="fa-li fa fa-euro"></i> Tous les tarifs</a></li>
-                  <li><a href=""><i class="fa-li fa fa-newspaper-o"></i> Publications</a></li>
+                  <li><a href=""><i class="fa-li fa fa-file-text-o"></i> Publications</a></li>
                   <li><a href=""><i class="fa-li fa fa-legal"></i> Mentions légales</a></li>
                   <li><a href=""><i class="fa-li fa fa-sitemap"></i> Plan du site</a></li>
                 </ul>

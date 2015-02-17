@@ -247,6 +247,13 @@ li.mb-mode {
   // background-color: red;
 }
 
+#mb-departure-field,
+#mb-destination-field,
+#mb-iti-bloc-details > fieldset {
+  display: inline-block;
+  width: 50%;
+}
+
 #mb-departure-field {
   legend {
     @include font-awesome($fa-flag, $yelo-color-green);

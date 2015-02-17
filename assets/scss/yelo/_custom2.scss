@@ -76,7 +76,10 @@ body {
 
 
 ul.list-delimited-light {
-  margin: 0;
+  // margin: 0;
+  margin-bottom: 0px;
+  margin-left: 4px;
+  margin-right: 4px;
   > li {
     @include padding-medium-block-width;
     @include padding-large-block-height;
@@ -85,7 +88,8 @@ ul.list-delimited-light {
     // @include li-alternate-color ($yelo-list-color-light-even, $yelo-list-color-light-odd);
     
     &:not(:last-child) {
-      @include separate-bg-stripe;
+      margin-bottom: 8px;
+      // @include separate-bg-stripe;
       // border-top: 1px dotted $yelo-color-black;
     }
     // @include li-separate-color ($yelo-list-border-color-light-even, $yelo-list-border-color-light-odd);
@@ -129,6 +133,9 @@ ul.list-delimited-light {
 
 .block-primary {
   border-radius: 10px 0 0 0;
+  color: $yelo-color-gray-hardest;
+  font-family: $open;
+  font-size: 14px;
   @include border-radius-bottom-left($yelo-border-radius);
   header {
     border-radius: 10px 0 0 0;
@@ -145,6 +152,9 @@ ul.list-delimited-light {
     padding-bottom: 0px;
     padding-left: 4px;
     position: relative;
+  }
+  p {
+    @include padding-medium-block-width;
   }
   footer {
     background-color: $yelo-first-color;
@@ -201,7 +211,7 @@ ul.list-delimited-light {
   }
   footer {
     background-color: $yelo-light-color;
-    border-top: 4px solid $yelo-color-white;
+    // border-top: 4px solid $yelo-color-white;
     line-height: 2rem;
     text-align: right;
     @include bg-stripe;
@@ -239,6 +249,7 @@ section {
 
 .infos-trafic {
   // margin: 0;
+  background-color: $yelo-color-gray-lightest;
   h4 {
     color: $yelo-color-gray-hardest;
     font-family: $openB;
@@ -278,6 +289,7 @@ section {
 }
 
 .news {
+  background-color: $yelo-color-gray-lightest;
   h4 {
     color: $yelo-color-gray-hardest;
     font-family: $open;
