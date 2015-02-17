@@ -67,10 +67,7 @@
     font-size: 1rem;
     line-height: 2.5rem;
     // height: 60px;
-    @include bg-stripe;
-    background-repeat-x: repeat;
-    background-repeat-y: no-repeat;
-    background-position-y: bottom;
+    @include separate-bg-stripe;
   }
   label {
     color: #717171;

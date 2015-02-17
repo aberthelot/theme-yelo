@@ -45,6 +45,19 @@
   background-image: image-url("bg-stripe.png");
 }
 
+@mixin teasing {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin separate-bg-stripe {
+  background-repeat-x: repeat;
+  background-repeat-y: no-repeat;
+  background-position-y: bottom;
+  @include bg-stripe;
+}
+
 @mixin list-unstyled {
   margin-left: 0;
   list-style: none;

@@ -1,7 +1,76 @@
+body {
+  // background-color: green;
+  background-color: $yelo-color-white;
+  // background-color: $yelo-color-gray-lightest;
+  // @include bg-stripe;
+}
+
+@media (max-width: 767px) {
+
+  // Padding to set content in a bit
+  body {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+#wrapper,
+.footer-page .content {
+  @include padding-medium-block-width;
+}
+
+.block-primary,
+.block-quick {
+  background-color: $yelo-color-white;
+}
+
 
 
 .footer-page {
-  background-color: $yelo-color-gray-harder;
+  margin-top: 40px;
+
+  .walk {
+    background-image: image-url("bg-yelo-bike-walk.png");
+    // background-repeat-x: repeat;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    height: 53px;
+  }
+
+  .demarcation {
+    background-color: $yelo-color-gray-lighter;
+    border-bottom: 1px solid $yelo-color-white;
+    border-top: 1px solid $yelo-color-white;
+    height: 8px;
+  }
+
+  .content {
+    background-color: $yelo-color-gray-harder;
+  }
+
+  .container {
+    
+    color: $yelo-color-gray-lightest;
+    // @include padding-medium-block-width;
+    // @include padding-large-block-height;
+    a {
+      color: inherit;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+    address {
+      font-size: 12px;
+      text-align: right;
+    }
+    
+  }
+
+  // .fa {
+  //   font-size: 14px;
+  // }
+  // .row > .span4 {
+  //   border-right: 4px solid $yelo-color-gray-lightest;
+  // }
 }
 
 
@@ -10,11 +79,15 @@ ul.list-delimited-light {
   margin: 0;
   > li {
     @include padding-medium-block-width;
-    @include padding-small-block-height;
+    @include padding-large-block-height;
     margin: 0;
     background-color: $yelo-color-white;
     // @include li-alternate-color ($yelo-list-color-light-even, $yelo-list-color-light-odd);
-    border-top: 1px dotted $yelo-color-black;
+    
+    &:not(:last-child) {
+      @include separate-bg-stripe;
+      // border-top: 1px dotted $yelo-color-black;
+    }
     // @include li-separate-color ($yelo-list-border-color-light-even, $yelo-list-border-color-light-odd);
   }
 }
@@ -29,10 +102,7 @@ ul.list-delimited-light {
 
 .block-quick {
   h3 {
-    background-image: image-url("bg-stripe.png");
-    background-repeat-x: repeat;
-    background-repeat-y: no-repeat;
-    background-position-y: bottom;
+    @include separate-bg-stripe;
     // display:inline-block;
     font-family: $openB;
     font-size: 20px;
@@ -52,14 +122,22 @@ ul.list-delimited-light {
   }
 }
 
+.block-primary,
+.block-secondary {
+  background-color: $yelo-color-white;
+}
+
 .block-primary {
+  border-radius: 10px 0 0 0;
+  @include border-radius-bottom-left($yelo-border-radius);
+  header {
+    border-radius: 10px 0 0 0;
+  }
   header {
     border-top: 4px solid $yelo-light-color;
     border-left: 4px solid $yelo-light-color;
-    border-radius: 10px 0 0 0;
   }
   h3 {
-    background-color: white;
     bottom: 1rem;
     font-family: $open;
     line-height: 1.5rem;
@@ -112,7 +190,7 @@ ul.list-delimited-light {
 
   // h3 {
     bottom: 20px;
-    left: -6px;
+    // left: -6px;
     padding: 0;
     position: relative;
   }
@@ -179,9 +257,6 @@ section {
     font-size: 12px;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
 }
 
@@ -213,6 +288,9 @@ section {
     font-family: $open;
     font-size: 12px;
   }
+
+
+
 }
 
 .directs {
@@ -256,3 +334,14 @@ section {
   background: image-url('picto-bus.svg') no-repeat center center;
 }
 
+.teasing {
+  @include teasing;
+}
+
+.fa-facebook {
+  color: $facebook-color;
+}
+
+.fa-rss {
+  color: $rss-color;
+}
