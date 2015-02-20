@@ -75,6 +75,11 @@ body {
 
 
 
+.logo-cda {
+  text-align: right;
+}
+
+
 ul.list-delimited-light {
   // margin: 0;
   margin-bottom: 0px;
@@ -219,9 +224,17 @@ ul.list-delimited-light {
     @include padding-medium-block-width;
 
     a {
-      color: $yelo-color-black;
-      font-size: 10px;
+      display: block;
+      font-size: 16px;
+      text-align: center;
       text-transform: uppercase;
+      color: $yelo-color-black;
+      text-transform: uppercase;
+      @media (min-width: 768px) {
+        display: inline;
+        font-size: 10px;
+        text-align: inherit;
+      }
     }
   }
 }
