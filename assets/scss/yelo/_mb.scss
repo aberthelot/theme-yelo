@@ -10,6 +10,21 @@
   font-family: $openB;
   font-size: 13px;
   text-transform: capitalize;
+
+  @media (min-width: 768px) {
+    select {
+      width: 120px;
+    }
+    #time {
+      .select-1, .select-2 {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.mandatory {
+  color: $yelo-color-red;
 }
 
 .mb-bloc-submit {
@@ -76,6 +91,14 @@
     font-style: italic;
     line-height: 0.8rem;
   }
+}
+
+.mandatory-info {
+  color: #717171;
+  font-family: $open;
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 0.8rem;
 }
 
 #mb-resume-content {
@@ -247,11 +270,16 @@ li.mb-mode {
   // background-color: red;
 }
 
-#mb-departure-field,
-#mb-destination-field,
-#mb-iti-bloc-details > fieldset {
-  display: inline-block;
-  width: 50%;
+@media (min-width: 768px) {
+
+  #mb-departure-field,
+  #mb-destination-field,
+  #mb-iti-bloc-details > fieldset {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+  }
+
 }
 
 #mb-departure-field {

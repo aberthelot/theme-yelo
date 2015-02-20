@@ -11,6 +11,7 @@
   <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
   
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="assets/css/font-awesome/css/font-awesome.min.css"> -->
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -224,7 +225,7 @@
                                       </select>
                                     </span>
                                   </div>
-                                </fieldset><div><input type="hidden" id="mb-selectWalkSpeed" name="selectWalkSpeed" value="60"></div><fieldset>
+                                </fieldset><fieldset>
                                   <legend>Modes de transport</legend>
                                   <div class="mb-bloc-inline-fields">
                                     <span>
@@ -287,7 +288,7 @@
                   </div>
                 </section>
 
-                <section class="block-secondary infos-trafic">
+                <section class="block-secondary infos-trafic hidden-phone">
                   <header>
                     <h3>
                      <span class="fa-stack">
@@ -301,7 +302,9 @@
                     <li>
                       <section>
                         <a href="">
-                          <span class="tags">Mobilité</span>
+                          <div class="wrapper-tags">
+                            <span class="tags">Mobilité</span>
+                          </div>
                           <h4>Déblocage du dépôt de bus</h4>
                           <p class="teasing">Aujourd'hui mardi 3 février, le tribunal ordonne la libération immédiate du dépôt de bus.</p>
                         </a>
@@ -310,7 +313,9 @@
                     <li>
                       <section>
                         <a href="">
-                          <span class="tags">Grève</span>
+                          <div class="wrapper-tags">
+                            <span class="tags">Grève</span>
+                          </div>
                           <h4>Déblocage du dépôt de bus</h4>
                           <p class="teasing">Aujourd'hui mardi 3 février, le tribunal ordonne la libération immédiate du dépôt de bus.</p>
                         </a>
@@ -318,9 +323,25 @@
                     </li>
                   </ul>
                   <footer>
-                    \\ <a href="">Toutes les infos trafic</a>
-                    \\ <a href="">S'inscrire aux alertes</a>
+                    <div>
+                      \\ <a href="">Toutes les infos trafic</a>
+                    </div>
+                    <div>
+                      \\ <a href="">S'inscrire aux alertes</a>
+                    </div>
                   </footer>
+                </section>
+
+                <section class="block-quick hidden-phone">
+                  <header>
+                    <h3>
+                      <i class="fa fa-phone"></i>
+                      Nous contacter
+                    </h3>
+                  </header>
+                  <div class="content-quick">
+                    <img src="assets/img/azur.png" alt="">
+                  </div>
                 </section>
 
               </div>
@@ -330,10 +351,10 @@
               <!-- Accès directs -->
               <div class="span8">
                 <section class="block-primary directs">
-                  <header>
-                    <h3 class="hidden-phone">Accès directs</h3>
+                  <header class="hidden-phone">
+                    <h3>Accès directs</h3>
                   </header>
-                  <ul class="unstyled inline">
+                  <ul class="unstyled inline services">
                     <li>
                       <div class="circle"></div>
                       <div class="circle-img"><i class="fa fa-bus"></i></div>
@@ -350,28 +371,26 @@
                       <div class="circle-txt">Voiture</div>
                     </li><li>
                       <div class="circle"></div>
-                      <div class="circle-img"><i class="fa fa-list"></i></div>
-                      <div class="circle-txt">Autres</div>
+                      <div class="circle-img"><i class="fa fa-mobile"></i></div>
+                      <div class="circle-txt">SMS</div>
                     </li>
                   </ul>
-                  <footer></footer>
+                  <div class="wrapper-links hidden-phone">
+                    <ul class="unstyled">
+                      <li>
+                        <i class="fa fa-plus-square"></i> <a href="">Horaires aux stations</a>
+                      </li>
+                      <li>
+                        <i class="fa fa-plus-square"></i> <a href="">Abonnements de bus</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <footer class="hidden-phone"></footer>
                 </section>
               </div>
               <!-- /Accès directs -->
               <!-- Abonnements -->
               <div class="span4">
-
-                <section class="block-quick hidden-phone">
-                  <header>
-                    <h3>
-                      <i class="fa fa-phone"></i>
-                      Nous contacter
-                    </h3>
-                  </header>
-                  <div class="content-quick">
-                    <img src="assets/img/azur.png" alt="">
-                  </div>
-                </section>
 
                 <section class="block-primary">
                   <header>
@@ -401,7 +420,9 @@
                           <img src="assets/img/affiche.jpeg" class="img-rounded">
                         </div>
                         <div class="span9">
-                          <span class="tags">Culture</span>
+                          <div class="wrapper-tags">
+                            <span class="tags">Culture</span>
+                          </div>
                           <h4>Résultats du concours photos</h4>
                           <div>Publiée le 15 janvier 2015</div>
                           <p class="teasing">La Communauté d'Agglomération a lancé lors de la semaine de la mobilité son premier concours photos « Mon vélo et l'agglo ». Ce concours était une invitation à mettre en scène son vélo sur le territoire de l'agglomération de façon originale, artistique, ou de manière à dénoncer des comportements ou des infrastructures inadaptées aux cyclistes.</p>
@@ -415,7 +436,9 @@
                           <img src="assets/img/bus.jpeg" class="img-rounded">
                         </div>
                         <div class="span9">
-                          <span class="tags">Mobilité</span>
+                          <div class="wrapper-tags">
+                            <span class="tags">Mobilité</span>
+                          </div>
                           <h4>Bus pratique : les modifications de lignes</h4>
                           <div>Publiée le 13 août 2013</div>
                           <p class="teasing">Après les adaptations réalisées début janvier sur le réseau de bus Yélo, c'est une deuxième phase de modifications qui entrera en vigueur pour de nouvelles communes le 2 septembre 2013. Issus des évaluations réalisées pendant trois ans sur la performance et la fréquentation de chaque ligne, ces nouveaux ajustements prennent en compte les usages réels, suppriment les doublons et permettent d'optimiser l'offre, dans un contexte financier contraint.</p>
@@ -515,6 +538,13 @@
       <script src="assets/js/bootstrap.min.js"></script>
       <script src="assets/js/bootstrap-tooltip.js"></script>
       <script src="assets/js/bootstrap-collapse.js"></script>
+      <script type="text/javascript">
+        if (window.matchMedia("(min-width: 768px)").matches) {
+          $('#collapseItineraire').collapse({
+            toggle: true
+          });
+        }
+      </script>
       <!-- Marque blanche CommentJV
       ================================================== -->
 

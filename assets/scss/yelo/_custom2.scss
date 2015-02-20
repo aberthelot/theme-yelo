@@ -207,7 +207,7 @@ ul.list-delimited-light {
 
   p {
     @include padding-medium-block-height;
-    @include padding-medium-block-width
+    @include padding-medium-block-width;
   }
   footer {
     background-color: $yelo-light-color;
@@ -226,15 +226,24 @@ ul.list-delimited-light {
   }
 }
 
-
+.wrapper-tags {
+  padding-top: $yelo-padding-large-block-height;
+  @media (min-width: 768px) {
+    padding-top: 0;
+  }
+}
 
 .tags {
   background-color: $yelo-first-color;
   font-size: 12px;
+  margin-top: 12px;
   text-transform: uppercase;
   @include bg-stripe;
   @include padding-small-block-height;
   @include padding-small-block-width;
+  @media (min-width: 768px) {
+    margin-top: 0px;
+  }
 }
 
 section {
@@ -306,7 +315,20 @@ section {
 }
 
 .directs {
-  li {
+
+  margin-bottom: 0;
+  margin-top: 0;
+
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .wrapper-links {
+    @include padding-medium-block-width;
+  }
+
+  .services li {
     box-sizing: border-box;
     padding: 1em;
     margin: 0 auto;
