@@ -25,6 +25,7 @@
 @import "bootstrap/variables";
 // Surcharge des variables dans un fichier distinct
 @import "yelo/variables";
+@import "yelo/functions";
 // Core mixins
 @import "bootstrap/mixins";
 // Surcharge des mixins dans un fichier distinct
@@ -96,7 +97,7 @@
 
 
 
-@import "yelo/custom";
+// @import "yelo/custom";
 @import "yelo/custom2";
 @import "yelo/navigation";
 @import "yelo/typo";

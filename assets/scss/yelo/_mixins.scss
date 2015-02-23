@@ -42,11 +42,11 @@
 }
 
 @mixin bg-stripe {
-  background-image: image-url("bg-stripe.png");
+  background-image: find-img("bg-stripe.png");
 }
 
 @mixin bg-stripe-darker {
-  background-image: image-url("bg-stripe-darker.png");
+  background-image: find-img("bg-stripe-darker.png");
 }
 
 @mixin teasing {
@@ -123,7 +123,7 @@
   padding-top: $yelo-padding-large-block-height;
 }
 
-// @mixin opacity($opacity) {
-//   opacity: $opacity / 100;
-//   filter: alpha(opacity=$opacity);
-// }
+@mixin opacity($opacity) {
+  opacity: $opacity / 100;
+  filter: alpha(opacity=$opacity);
+}

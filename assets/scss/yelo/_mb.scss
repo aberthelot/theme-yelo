@@ -136,7 +136,7 @@ ul.mb-results-misc {
     right: 24px;
     a {
       background-color: $yelo-second-color;
-      background-image: image-url("bg-stripe.png");
+      background-image: find-img("bg-stripe.png");
       display: block;
       font-family: $openB;
       font-size: 16px;
@@ -157,7 +157,7 @@ ul.mb-results-misc {
   }
   h2 {
     background-color: $yelo-first-color;
-    background-image: image-url("bg-stripe.png");
+    background-image: find-img("bg-stripe.png");
     font-size: 22px;
   }
 }
@@ -168,7 +168,7 @@ ul#mb-search-results-list {
   @include padding-medium-block-width;
   @include padding-medium-block-height;
     background-color: $yelo-color-gray-lightest;
-    background-image: image-url("bg-stripe.png");
+    background-image: find-img("bg-stripe.png");
     // border: 1px dotted $yelo-color-gray-harder;
     margin-bottom: 24px;
     // @include li-alternate-color($yelo-list-color-light-even, $yelo-list-color-light-odd);
