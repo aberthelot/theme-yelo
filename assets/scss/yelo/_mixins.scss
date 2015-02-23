@@ -45,6 +45,10 @@
   background-image: image-url("bg-stripe.png");
 }
 
+@mixin bg-stripe-darker {
+  background-image: image-url("bg-stripe-darker.png");
+}
+
 @mixin teasing {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -55,7 +59,7 @@
   background-repeat-x: repeat;
   background-repeat-y: no-repeat;
   background-position-y: bottom;
-  @include bg-stripe;
+  @include bg-stripe-darker;
 }
 
 @mixin list-unstyled {

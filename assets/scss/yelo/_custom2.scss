@@ -158,9 +158,6 @@ ul.list-delimited-light {
     padding-left: 4px;
     position: relative;
   }
-  p {
-    @include padding-medium-block-width;
-  }
   footer {
     background-color: $yelo-first-color;
     height: 30px;
@@ -269,9 +266,29 @@ section {
   @include bg-stripe;
 }
 
+.search-travel {
+  // background-color: $yelo-color-gray-lightest;
+  // padding-left: 4px;
+  // padding-right: 4px;
+  > p {
+    @include padding-medium-block-width;
+  }
+  div {
+    // background-color: $yelo-color-white;
+  }
+}
+
 .infos-trafic {
   // margin: 0;
   background-color: $yelo-color-gray-lightest;
+  h3 {
+    .fa-stack {
+      color: $yelo-color-yellow;
+      .fa-inverse {
+        color: $yelo-color-black;
+      }
+    }
+  }
   h4 {
     color: $yelo-color-gray-hardest;
     font-family: $openB;
@@ -317,17 +334,19 @@ section {
     font-family: $open;
     font-size: 16px;
   }
-  p {
+  p.teasing {
     color: $yelo-color-gray-harder;
     font-family: $open;
     font-size: 12px;
   }
 
-
-
 }
 
+
+
 .directs {
+
+  background-color: $yelo-color-gray-lightest;
 
   margin-bottom: 0;
   margin-top: 0;
@@ -337,8 +356,44 @@ section {
     margin-top: 30px;
   }
 
+  header {
+    &:not(:first-child) {
+      background-color: $yelo-color-white;
+    }
+    border: 0;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+    h4 {
+      margin-bottom: 0;
+      @include padding-medium-block-height;
+    }
+  }
+
   .wrapper-links {
-    @include padding-medium-block-width;
+    // @include padding-medium-block-width;
+    background-color: $yelo-color-white;
+    margin-left: 4px;
+    margin-right: 4px;
+    // margin-top: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+    ul {
+      margin-bottom: 0px;
+      li {
+        @include padding-medium-block-height;
+
+        &:not(:first-child) {
+          border-top: 1px solid $yelo-color-gray-lighter;
+        }
+      }
+    }
+    a {
+      font-family: $openB;
+      font-size: 14px;
+    }
   }
 
   .services li {
@@ -382,6 +437,7 @@ section {
 }
 
 .teasing {
+  // padding: 0;
   @include teasing;
 }
 

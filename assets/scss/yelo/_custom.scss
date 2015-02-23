@@ -53,7 +53,7 @@
 		}
     }
     #content-wrapper {
-    	background: image-url("content-bg.png") left top;
+    	// background: image-url("content-bg.png") left top;
 		display: block;
 		
 		#content {
@@ -188,9 +188,9 @@
 					> div.pictoOf {						
 						/* picto ajout jaune */
 						.plus {
-							width: 21px;
-							height: 21px;
-							background: image-url("plus.png") no-repeat;
+							// width: 21px;
+							// height: 21px;
+							// background: image-url("plus.png") no-repeat;
 							position: absolute;
 							top: 70px;
 							right: 0;

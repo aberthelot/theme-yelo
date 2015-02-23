@@ -70,7 +70,7 @@
             <div class="row">
               <!-- Itinéraires -->
               <div class="span8">
-                <section class="block-primary">
+                <section class="block-primary search-travel bg-stripe">
                   <header>
                     <h3>Itinéraire</h3>
                   </header>
@@ -229,7 +229,7 @@
                                   <legend>Modes de transport</legend>
                                   <div class="mb-bloc-inline-fields">
                                     <span>
-                                      <input type="checkbox" name="Mode[]" id="mb-mode-car" value="car" checked="checked"> car
+                                      <!-- <input type="checkbox" name="Mode[]" id="mb-mode-car" value="car" checked="checked"> car -->
                                       <input type="checkbox" name="Mode[]" id="mb-mode-bus" value="bus" checked="checked"> bus
                                       <input type="checkbox" name="Mode[]" id="mb-mode-train" value="train" checked="checked"> train
                                       <input type="checkbox" name="Mode[]" id="mb-mode-bateau" value="bateau" checked="checked"> bateau
@@ -248,7 +248,7 @@
                       </div>
                     </div>
                     <footer>
-                        <a class="btn-yelo" data-toggle="collapse" href="#collapseItineraire">
+                        <a class="btn-yelo visible-phone" data-toggle="collapse" href="#collapseItineraire">
                           <i class="fa fa-flag-checkered fa-lg"></i> Itinéraire
                         </a>
                     </footer>
@@ -344,6 +344,9 @@
                   <div class="content-quick">
                     <img src="assets/img/azur.png" alt="">
                   </div>
+                  <div>
+                    <i class="fa fa-envelope-square"></i> Nous envoyer un email
+                  </div>
                 </section>
 
               </div>
@@ -352,11 +355,85 @@
             <div class="row">
               <!-- Accès directs -->
               <div class="span8">
-                <section class="block-primary directs">
+
+                <section class="block-primary directs bg-stripe">
                   <header class="hidden-phone">
-                    <h3>Accès directs</h3>
+                    <h3>Mes déplacements</h3>
                   </header>
-                  <ul class="unstyled inline services">
+
+
+        <main id="content-wrapper">
+          <div id="content">
+                <section id="deplacements">
+                   <div class="elementNav">
+                        <div class="picto pictoOf">
+                          <a href="#" data-toggle="tooltip" title="Activer le service" 
+                            data-placement="bottom" id="bus">
+                              <div id="picto-bus"></div>
+                                <!-- <span class="plus"></span> -->
+                                <span class="fa-stack plus">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <span class="texte">Abonnement de bus</span>
+                            </a>
+                                                        
+                            <a href="#" data-toggle="tooltip" title="Désactiver le service" 
+                            data-placement="bottom" class="moins"></a>
+                        </div>
+                   </div>
+                    
+                   <div class="elementNav">
+                       <div class="picto pictoOf">
+                          <a href="#" data-toggle="tooltip" title="Activer le service" 
+                            data-placement="bottom" id="velo">
+                              <div id="picto-velo"></div>
+                                <!-- <span class="plus"></span> -->
+                                <span class="fa-stack plus">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <span class="texte">Libre-service vélo</span>
+                            </a>
+                            <a href="#" data-toggle="tooltip" title="Désactiver le service" 
+                            data-placement="bottom" class="moins"></a>
+                        </div>
+                   </div>
+                   
+                   <div class="elementNav">
+                        <div class="picto pictoOf">
+                          <a href="#" data-toggle="tooltip" title="Activer le service" 
+                            data-placement="bottom" id="alerte">
+                              <div id="picto-alerte"></div>
+                                <!-- <span class="plus"></span> -->
+                                <span class="fa-stack plus">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <span class="texte">Alerte bus</span>
+                            </a>
+                            <a href="#" data-toggle="tooltip" title="Désactiver le service" 
+                            data-placement="bottom" class="moins"></a>
+                        </div>
+                   </div>
+                   
+                   <div class="elementNav">
+                        <div class="picto pictoOn">
+                            <a href="#" data-toggle="tooltip" title="Accéder au service" 
+                            data-placement="bottom" id="voiture">
+                              <div id="picto-voiture"></div>
+                                <span class="plus"></span>
+                                <span class="texte">Libre-service voiture</span>
+                            </a>
+                            <a href="#" data-toggle="tooltip" title="Désactiver le service" 
+                            data-placement="bottom" class="moins"></a>
+                        </div>
+                   </div>
+               </section>
+           </div>
+    </main>
+
+ <!--                  <ul class="unstyled inline services">
                     <li>
                       <div class="circle"></div>
                       <div class="circle-img"><i class="fa fa-bus"></i></div>
@@ -367,6 +444,18 @@
                       <div class="circle"></div>
                       <div class="circle-img"><i class="fa fa-car"></i></div>
                       <div class="circle-txt">Vélo</div>
+                   <div class="elementNav">
+                       <div class="picto pictoOf">
+                          <a href="#" data-toggle="tooltip" title="Activer le service" 
+                            data-placement="bottom" id="velo">
+                              <div id="picto-velo"></div>
+                                <span class="plus"></span>
+                                <span class="texte">Libre-service vélo</span>
+                            </a>
+                            <a href="#" data-toggle="tooltip" title="Désactiver le service" 
+                            data-placement="bottom" class="moins"></a>
+                        </div>
+                   </div>
                     </li><li>
                       <div class="circle"></div>
                       <div class="circle-img"><i class="fa fa-bicycle"></i></div>
@@ -376,12 +465,17 @@
                       <div class="circle-img"><i class="fa fa-mobile"></i></div>
                       <div class="circle-txt">SMS</div>
                     </li>
-                  </ul>
+                  </ul> -->
+
+
+                    <header class="hidden-phone">
+                      <h4>Accès directs</h4>
+                    </header>
                   <div class="wrapper-links hidden-phone">
                     <ul class="unstyled">
-                      <li>
+<!--                       <li>
                         <i class="fa fa-plus-square"></i> <a href="">Horaires aux stations</a>
-                      </li>
+                      </li> -->
                       <li>
                         <i class="fa fa-plus-square"></i> <a href="">Abonnements de bus</a>
                       </li>
@@ -399,11 +493,14 @@
 
                 <section class="block-primary">
                   <header>
-                    <h3>Trouver les stations les plus proches</h3>
+                    <h3>Horaires aux stations</h3>
                   </header>
+                  <div class="hidden-phone">
+                    <img src="assets/img/horaires.jpg">
+                  </div>
                   <footer>
                       <a class="btn-yelo" data-toggle="collapse" href="#collapseItineraire">
-                        <i class="fa fa-search fa-lg"></i> Rechercher
+                        <i class="fa fa-clock-o fa-lg"></i> Connaître
                       </a>
                   </footer>
                 </section>
@@ -427,11 +524,20 @@
                         <div class="span9">
                           <div class="wrapper-tags">
                             <span class="tags">Culture</span>
+    
                           </div>
                           <h4>Résultats du concours photos</h4>
                           <div>Publiée le 15 janvier 2015</div>
                           <p class="teasing">La Communauté d'Agglomération a lancé lors de la semaine de la mobilité son premier concours photos « Mon vélo et l'agglo ». Ce concours était une invitation à mettre en scène son vélo sur le territoire de l'agglomération de façon originale, artistique, ou de manière à dénoncer des comportements ou des infrastructures inadaptées aux cyclistes.</p>
-                          <p><a href="">Lire toute l'actualité</a></p>
+                          <p>
+                            <a href="">
+                              <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+                              </span>
+                              Lire toute l'actualité
+                            </a>
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -447,7 +553,15 @@
                           <h4>Bus pratique : les modifications de lignes</h4>
                           <div>Publiée le 13 août 2013</div>
                           <p class="teasing">Après les adaptations réalisées début janvier sur le réseau de bus Yélo, c'est une deuxième phase de modifications qui entrera en vigueur pour de nouvelles communes le 2 septembre 2013. Issus des évaluations réalisées pendant trois ans sur la performance et la fréquentation de chaque ligne, ces nouveaux ajustements prennent en compte les usages réels, suppriment les doublons et permettent d'optimiser l'offre, dans un contexte financier contraint.</p>
-                          <p><a href="">Lire toute l'actualité</a></p>
+                          <p>
+                            <a href="">
+                              <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+                              </span>
+                              Lire toute l'actualité
+                            </a>
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -465,6 +579,21 @@
               <!-- /Actualités -->
               <!-- Yélo institutionnel -->
               <div class="span4">
+
+                <section class="block-primary">
+                  <header>
+                    <h3>Stations les plus proches</h3>
+                  </header>
+                  <div class="hidden-phone">
+                    <img src="assets/img/station.jpg">
+                  </div>
+                  <footer>
+                      <a class="btn-yelo" data-toggle="collapse" href="#collapseItineraire">
+                        <i class="fa fa-map-marker fa-lg"></i> Trouver
+                      </a>
+                  </footer>
+                </section>
+
               </div>
               <!-- /Yélo institutionnel -->
             </div>
