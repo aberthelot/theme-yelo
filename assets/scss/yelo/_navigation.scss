@@ -1,103 +1,222 @@
+
+@import "compass";
+
+// Navigation principale ------------------ //
+
+header.main {
+  // background-color: $yelo-color-gray-lightest;
+  background-color: inherit;
+  height: 180px;
+  position: relative;
+  width: 100%;
+  // z-index: 200;
+  // @include bg-stripe;
+}
+
+.testalvin {
+  // text-align: center;
+  // max-width: 100%;
+  img {
+    position: absolute;
+    right: 0;
+    left:0;
+    // left: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    // top: -40px;
+    // z-index: 2;
+  }
+}
+
+$height-logo: 140px;
+
+.navbar .navbar-inner {
+    // text-align: center;
+    // margin: 0 auto;
+}
+
+// .navbar .navbar-inner .nav {
+//     display:inline-block;
+//     float: none;
+// }
+
+.navbar {
+  border-bottom: 4px solid $yelo-color-gray-lightest;
+  border-top: 4px solid $yelo-color-gray-lightest;
+  // margin-top: $height-logo;
+  margin-bottom: 60px;
+  .navbar-inner {
+    // background-color: $yelo-color-gray-lighter;
+
+    // @include linear-gradient($yelo-color-gray-lighter, $yelo-color-white);
+
+
+    @include bg-stripe;
+    background-repeat: repeat;
+    border: 0;
+    // height: 60px;
+    // padding-top: 30px;
+    @include border-radius(0);
+    @media (min-width: 768px) {
+      // padding-left: 0;
+    }
+    .container {
+
+      .brand {
+        margin-top: -$height-logo;
+        padding: 0;
+        position: absolute;
+      }
+      .nav-collapse {
+        @media (min-width: 768px) {
+          // padding-left: 200px;
+        }
+      }
+      ul.nav > li > a {
+        color: $yelo-color-black;
+        font-family: $openB;
+        font-size: 18px;
+        // border-bottom: 4px solid inherit;
+      }
+    }
+  }
+}
+
+ul.dropdown-menu {
+  background-color: $yelo-color-gray-lightest;
+  @include bg-stripe;
+  li > a {
+    font-family: $open;
+    font-size: 12px;
+    text-transform: uppercase;
+    &:hover, &:focus {
+      background-color: $yelo-color-yellow;
+      background-image: none;
+      color: $yelo-color-black;
+    }
+  }
+}
+
+.navbar .nav > li > .dropdown-menu {
+  &:after, &:before {
+    display: none;
+  }
+}
+
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  // background-color: $yelo-color-yellow;
+  // z-index: -1;
+  // background-color: $yelo-color-gray-lightest;
+  background-color: inherit;
+  // border-bottom: 4px solid $yelo-color-yellow;
+  color: $yelo-color-black;
+  @include bg-stripe-darker;
+}
+
+
+
 a.menu-link {
-  	    float: right;
-		    display: block;
-		    padding: 1em;
-		}
-		.menu, .menu > ul ul {
-			clear: both;
-			-webkit-transition: all 0.3s ease-out;  
-			-moz-transition: all 0.3s ease-out;
-			-ms-transition: all 0.3s ease-out;
-			-o-transition: all 0.3s ease-out;
-			transition: all 0.3s ease-out;
-		}
-		.js .menu, .js .menu > ul ul {
-			overflow: hidden;
-			max-height: 0;
-			background: rgba(0,0,0,0.1);
-		}
-		.menu.active, .js .menu > ul ul.active {
-			max-height: 55em;
-		}
-		.menu > ul {
-			border-top: 1px solid #808080;
-		}
-		.menu li a {
-			color: #000;
-			display: block;
-			padding: 0.8em;
-			border-bottom: 1px solid #808080;
-			position: relative;
-		}
-		.menu li.has-subnav > a:after {
-			content: '+';
-			position: absolute;
-			top: 0;
-			right: 0;
-			display: block;
-			font-size: 1.5em;
-			padding: 0.25em 0.5em;
-		}
-		.menu li.has-subnav > a.active:after {
-			content: "-";
-		}
-		
-		
-		@media screen and (min-width: 48.25em) {
-			.pattern {
-				overflow: visible;
-			}
-			a.menu-link {
-			   display: none;
-			}
-			.js .menu, .js .menu > ul ul {
-				max-height: none;
-				overflow: visible;
-				background: none;
-			}
-			.js .menu > ul ul {
-				background: #808080;
-				display: none;
-			}
-			.js .menu > ul li:hover > ul {
-				display: block;
-			}
-			.menu ul {
-				margin: 0 0 0 -0.25em;
-				border: 0;
-			}
-			.menu li a {
-				border: 0;
-			}
-			.menu li.has-subnav > a {
-				padding-right: 2em;
-			}
-			.menu li.has-subnav > a:after {
-				content: ">";
-				font-size: 1em;
-				padding: 0.8em 0.5em;
-			}
-			.menu .level-1 > li.has-subnav > a:after {
-				content: "▼";
-			}
-			.menu > ul li {
-				margin: 0 0.25em;
-			}
-			.menu > ul > li {
-				display: inline-block;
-				position: relative;
-			}
-			.menu > ul ul {
-				position: absolute;
-				top: 0;
-				left: 12em;
-				width: 12em;
-			}
-			.menu > ul ul li {
-				position: relative;
-			}
-			.menu > ul ul.level-2 {
-				top: 3em;
-				left: 0;
-			}
-		}
+        float: right;
+        display: block;
+        padding: 1em;
+    }
+    .menu, .menu > ul ul {
+      clear: both;
+      -webkit-transition: all 0.3s ease-out;  
+      -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+    .js .menu, .js .menu > ul ul {
+      overflow: hidden;
+      max-height: 0;
+      background: rgba(0,0,0,0.1);
+    }
+    .menu.active, .js .menu > ul ul.active {
+      max-height: 55em;
+    }
+    .menu > ul {
+      border-top: 1px solid #808080;
+    }
+    .menu li a {
+      color: #000;
+      display: block;
+      padding: 0.8em;
+      border-bottom: 1px solid #808080;
+      position: relative;
+    }
+    .menu li.has-subnav > a:after {
+      content: '+';
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      font-size: 1.5em;
+      padding: 0.25em 0.5em;
+    }
+    .menu li.has-subnav > a.active:after {
+      content: "-";
+    }
+    
+    
+    @media screen and (min-width: 48.25em) {
+      .pattern {
+        overflow: visible;
+      }
+      a.menu-link {
+         display: none;
+      }
+      .js .menu, .js .menu > ul ul {
+        max-height: none;
+        overflow: visible;
+        background: none;
+      }
+      .js .menu > ul ul {
+        background: #808080;
+        display: none;
+      }
+      .js .menu > ul li:hover > ul {
+        display: block;
+      }
+      .menu ul {
+        margin: 0 0 0 -0.25em;
+        border: 0;
+      }
+      .menu li a {
+        border: 0;
+      }
+      .menu li.has-subnav > a {
+        padding-right: 2em;
+      }
+      .menu li.has-subnav > a:after {
+        content: ">";
+        font-size: 1em;
+        padding: 0.8em 0.5em;
+      }
+      .menu .level-1 > li.has-subnav > a:after {
+        content: "▼";
+      }
+      .menu > ul li {
+        margin: 0 0.25em;
+      }
+      .menu > ul > li {
+        display: inline-block;
+        position: relative;
+      }
+      .menu > ul ul {
+        position: absolute;
+        top: 0;
+        left: 12em;
+        width: 12em;
+      }
+      .menu > ul ul li {
+        position: relative;
+      }
+      .menu > ul ul.level-2 {
+        top: 3em;
+        left: 0;
+      }
+    }
