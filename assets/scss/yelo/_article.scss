@@ -1,0 +1,88 @@
+
+
+h2.cdalr-toggle-bar-title {
+  @include second-color-stripe ;
+}
+
+h2.cdalr-toggle-bar-title .open{
+  @include first-color-stripe ;
+}
+
+.bloc-resources {
+  .bloc-resources-titre {
+    font-family: $text-strong;
+    @include bg-stripe;
+    @include padding-medium-block-height;
+    @include padding-medium-block-width;
+  }
+  .bloc-resources-content {
+    color: $yelo-color-gray-normal;
+    font-family: $text;
+    font-size: calculate-rem(12px);
+    text-transform: uppercase;
+    @include padding-large-block-height;
+    a {
+      font-size: calculate-rem(14px);
+      color: inherit;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.journal-content-article {
+  font-family: $text;
+  h3 {
+    font-family: $title;
+    font-size: calculate-rem(20px);
+  }
+  .cdalr-ckeditor-text {
+    font-family: inherit;
+    font-size: calculate-rem(12px);
+    h4 {
+      border-bottom: 1px dotted $yelo-color-black;
+      color: $yelo-color-gray-normal;
+      font-size: calculate-rem(17px);
+      @include padding-medium-block-height;
+      @include margin-large-block-height;
+    }
+    li {
+      @include font-awesome($fa-caret-right, $yelo-first-color, calculate-rem(18px), 4px);
+    }
+  }
+  .cdalr-ckeditor-legend {
+    border-top: 2px solid $yelo-first-color;
+    font-family: inherit;
+    font-size: calculate-rem(12px);
+    position: relative;
+    @include padding-large-block-height;
+    @include font-awesome($fa-caret-down, $yelo-first-color, calculate-rem(36px), 0);
+    &:before {
+      position: absolute;
+      left: 10px;
+      top: -15px;
+    }
+  }
+  .cdalr-ckeditor-focus {
+    background-color: $yelo-color-gray-lightest;
+    color: $yelo-color-gray-normal;
+    font-size: calculate-rem(14px);
+    @include padding-large-block-height;
+    @include padding-large-block-width;
+    @include margin-large-block-height;
+  }
+  .cdalr-ckeditor-intro {
+    color: $yelo-color-gray-normal;
+    font-size: calculate-rem(13px);
+    @include padding-large-block-height;
+  }
+  .cdalr-ckeditor-surtitre {
+    background-color: $yelo-first-color;
+    color: $yelo-color-black;
+    font-size: calculate-rem(21px);
+    @include padding-medium-block-height;
+    @include padding-medium-block-width;
+    @include margin-medium-block-height;
+  }
+}

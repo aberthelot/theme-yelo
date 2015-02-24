@@ -3,3 +3,8 @@ $path-img: "../img";
 @function find-img($name-img) {
   @return url("#{$path-img}/#{$name-img}");
 }
+
+@function calculate-rem($size) {
+  $remSize: $size / $baseFontSize;
+  @return #{$remSize}rem;
+}

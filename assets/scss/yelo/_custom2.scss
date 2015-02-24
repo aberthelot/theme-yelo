@@ -310,7 +310,7 @@
     padding-left: 8px;
     padding-right: 8px;
     h4 {
-      font-family: $openB;
+      font-family: $title;
       margin-bottom: 0;
       margin-top: 0;
       @include padding-medium-block-height;
@@ -336,7 +336,7 @@
       }
     }
     a {
-      font-family: $openB;
+      font-family: $text-strong;
       font-size: 14px;
     }
   }
@@ -402,7 +402,7 @@
       background-color: $yelo-color-black;
       bottom: 0;
       color: $yelo-color-white;
-      font-family: $openB;
+      font-family: $text-strong;
       font-size: 18px;
       position: absolute;
       right: 20px;
@@ -534,7 +534,7 @@ ul.list-delimited-light {
   h3 {
     @include separate-bg-stripe;
     // display:inline-block;
-    font-family: $openB;
+    font-family: $title;
     font-size: 20px;
   }
     i {
@@ -564,7 +564,7 @@ ul.list-delimited-light {
 .block-primary {
   border-radius: 10px 0 0 0;
   color: $yelo-color-gray-hardest;
-  font-family: $open;
+  font-family: $text;
   font-size: 14px;
   @include border-radius-bottom-left($yelo-border-radius);
   header.portlet-topper {
@@ -576,7 +576,7 @@ ul.list-delimited-light {
   }
   h1.portlet-title {
     bottom: 1rem;
-    font-family: $open;
+    font-family: $text;
     font-size: 26px;
     line-height: 1.5rem;
     margin: 0 0 0 20px;
@@ -600,7 +600,7 @@ ul.list-delimited-light {
       background-color: $yelo-color-black;
       bottom: 0;
       color: $yelo-color-white;
-      font-family: $openB;
+      font-family: $text-strong;
       font-size: 18px;
       position: absolute;
       right: 20px;
@@ -620,7 +620,7 @@ ul.list-delimited-light {
   @include border-radius($yelo-border-radius);
   h3 {
     color: $yelo-color-gray-hardest;
-    font-family: $openB;
+    font-family: $title;
     font-size: 18px;
     margin-bottom: 0;
     @include padding-medium-block-width;
@@ -717,7 +717,7 @@ section {
   }
   h4 {
     color: $yelo-color-gray-hardest;
-    font-family: $openB;
+    font-family: $title;
     font-size: 14px;
   }
   // a {
@@ -729,7 +729,7 @@ section {
   }
   p {
     color: $yelo-color-gray-harder;
-    font-family: $open;
+    font-family: $text;
     font-size: 12px;
     margin: 0;
     padding: 0;
@@ -746,7 +746,7 @@ section {
   // }
   p {
     color: $yelo-color-gray-hardest;
-    font-family: $open;
+    font-family: $text;
     font-size: 13px;
   }
   a {
@@ -757,12 +757,12 @@ section {
   background-color: $yelo-color-gray-lightest;
   h4 {
     color: $yelo-color-gray-hardest;
-    font-family: $open;
+    font-family: $title;
     font-size: 16px;
   }
   p.teasing {
     color: $yelo-color-gray-harder;
-    font-family: $open;
+    font-family: $text;
     font-size: 12px;
   }
 

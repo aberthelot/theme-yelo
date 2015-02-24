@@ -41,9 +41,7 @@
   border-bottom-right-radius: $radius;
 }
 
-@mixin bg-stripe {
-  background-image: find-img("bg-stripe.png");
-}
+
 
 @mixin bg-stripe-darker {
   background-image: find-img("bg-stripe-darker.png");
@@ -107,6 +105,11 @@
   }
 }
 
+
+/********************/
+/*     PADDINGS
+/********************/
+
 @mixin padding-block-width($size) {
   padding-left: $size;
   padding-right: $size;
@@ -137,6 +140,44 @@
   @include padding-block-height($yelo-padding-large-block-height);
 }
 
+/********************/
+/*     MARGINS
+/********************/
+
+@mixin margin-block-width($size) {
+  margin-left: $size;
+  margin-right: $size;
+}
+@mixin margin-block-height($size) {
+  margin-bottom: $size;
+  margin-top: $size;
+}
+
+@mixin margin-small-block-width {
+  @include margin-block-width($yelo-margin-small-block-width);
+}
+@mixin margin-small-block-height {
+  @include margin-block-height($yelo-margin-small-block-height);
+}
+
+@mixin margin-medium-block-width {
+  @include margin-block-width($yelo-margin-medium-block-width);
+}
+@mixin margin-medium-block-height {
+  @include margin-block-height($yelo-margin-medium-block-height);
+}
+
+@mixin margin-large-block-width {
+  @include margin-block-width($yelo-margin-large-block-width);
+}
+@mixin margin-large-block-height {
+  @include margin-block-height($yelo-margin-large-block-height);
+}
+
+/********************/
+/*     OPACITY
+/********************/
+
 @mixin opacity($opacity) {
   opacity: $opacity / 100;
   filter: alpha(opacity=$opacity);
@@ -155,12 +196,23 @@
 
 
 
-@mixin first-color-stripe {
-  background-color: $yelo-first-color;
-  font-size: 12px;
-  // margin-top: 12px;
-  // text-transform: uppercase;
+/********************/
+/*     BACKGROUNDS
+/********************/
+
+@mixin bg-stripe {
+  background-image: find-img("bg-stripe.png");
+}
+
+@mixin bg-color-stripe($color) {
+  background-color: $color;
   @include bg-stripe;
-  @include padding-small-block-height;
-  @include padding-small-block-width;
+}
+
+@mixin first-color-stripe {
+  @include bg-color-stripe($yelo-first-color);
+}
+
+@mixin second-color-stripe {
+  @include bg-color-stripe($yelo-second-color);
 }

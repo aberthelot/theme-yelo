@@ -74,7 +74,7 @@ $height-logo: 140px;
       }
       ul.nav > li > a {
         color: $yelo-color-black;
-        font-family: $openB;
+        font-family: $text-strong;
         font-size: 18px;
         // border-bottom: 4px solid inherit;
       }
@@ -86,7 +86,7 @@ ul.dropdown-menu {
   background-color: $yelo-color-gray-lightest;
   @include bg-stripe;
   li > a {
-    font-family: $open;
+    font-family: $text;
     font-size: 12px;
     text-transform: uppercase;
     &:hover, &:focus {

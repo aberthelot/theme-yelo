@@ -4,10 +4,10 @@
 #mb-pagin-top h3 {
   color: $yelo-color-gray-normal;
   display: none;
-  font-family: $open;
+  font-family: $title;
 }
 .mb-bloc-inline-fields {
-  font-family: $openB;
+  font-family: $text-strong;
   font-size: 13px;
   text-transform: capitalize;
 
@@ -64,7 +64,7 @@
     background-color: $yelo-color-black;
     border: 0;
     color: $yelo-color-white;
-    font-family: $openB;
+    font-family: $text-strong;
     font-size: 18px;
     padding: 0;
   }
@@ -81,7 +81,7 @@
 #mb-block {
 	legend {
     border-bottom: 0px;
-    font-family: $openB;
+    font-family: $text-strong;
     font-size: 1rem;
     line-height: 2.5rem;
     // height: 60px;
@@ -90,7 +90,7 @@
   }
   label {
     color: #717171;
-    font-family: $openB;
+    font-family: $text-strong;
     font-size: 0.8rem;
     font-style: italic;
     line-height: 0.8rem;
@@ -99,7 +99,7 @@
 
 .mandatory-info {
   color: #717171;
-  font-family: $open;
+  font-family: $text;
   font-size: 0.8rem;
   font-style: italic;
   line-height: 0.8rem;
@@ -118,11 +118,11 @@ ul.mb-results-modes,
 ul.mb-results-misc {
   @include list-unstyled;
   color: $yelo-color-gray-harder;
-  font-family: $open;
+  font-family: $text;
   font-size: 13px;
   span {
     color: $yelo-color-gray-hardest;
-    font-family: $openB;
+    font-family: $text-strong;
   }
 }
 
@@ -138,7 +138,7 @@ ul.mb-results-misc {
       background-color: $yelo-second-color;
       background-image: find-img("bg-stripe.png");
       display: block;
-      font-family: $openB;
+      font-family: $text-strong;
       font-size: 16px;
       width: 100%;
       @include padding-medium-block-width;
@@ -152,7 +152,7 @@ ul.mb-results-misc {
   }
   h2, h3 {
     color: $yelo-color-black;
-    font-family: $open;
+    font-family: $title;
     @include padding-medium-block-width;
   }
   h2 {
@@ -234,7 +234,7 @@ li.mb-mode {
 .mb-results-goto,
 .mb-result-actions {
   background-color: $yelo-color-black;
-  font-family: $openB;
+  font-family: $text-strong;
   font-size: 16px;
   text-align: center;
   @include padding-medium-block-width;

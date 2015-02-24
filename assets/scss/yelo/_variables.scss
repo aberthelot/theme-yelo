@@ -13,10 +13,14 @@ $yelo-color-gray-normal: #777777;
 $yelo-color-gray-harder: #494949;
 $yelo-color-gray-hardest: #333333;
 //
-$yelo-color-gray-annex: #65696C;
+$yelo-color-gray-blue-annex: $color-blue-1;
+$color-blue-1: #a6c4d7; 
+$color-blue-2: #94b3c7;
+$color-blue-3: #94b3c7;
+
 //
 $yelo-first-color: $yelo-color-yellow;
-$yelo-second-color: $yelo-color-gray-annex;
+$yelo-second-color: $yelo-color-gray-blue-annex;
 $yelo-light-color: $yelo-color-gray-lightest;
 
 
@@ -31,8 +35,11 @@ $yelo-list-border-color-light-odd: $yelo-color-gray-normal;
 $facebook-color: #3B5998;
 $rss-color: #F26522;
 
-$color-blue-1: #a6c4d7; 
-$color-blue-2: #94b3c7;
+
+
+
+
+$baseFontSize: 16px;
 
 /********************/
 /*     SURCHARGES BOOTSTRAP
@@ -49,9 +56,22 @@ $yelo-padding-medium-block-height: 4px;
 $yelo-padding-large-block-width: 12px;
 $yelo-padding-large-block-height: 12px;
 
+$yelo-margin-small-block-width: 6px;
+$yelo-margin-small-block-height: 2px;
+$yelo-margin-medium-block-width: 12px;
+$yelo-margin-medium-block-height: 4px;
+$yelo-margin-large-block-width: 12px;
+$yelo-margin-large-block-height: 12px;
+
 
 $fa-angle-right: "\f105";
+$fa-bookmark: "\f02e";
+$fa-caret-down: "\f0d7";
+$fa-caret-left: "\f0d9";
+$fa-caret-up: "\f0d8";
+$fa-caret-right: "\f0da";
 $fa-clock-o: "\f017";
+$fa-info-circle: "\f05a";
 $fa-history: "\f1da";
 $fa-flag: "\f024";
 $fa-flag-checkered: "\f11e";
