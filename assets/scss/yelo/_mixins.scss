@@ -67,12 +67,23 @@
   list-style: none;
 }
 
-@mixin font-awesome($icon, $color) {
+// @mixin font-awesome($icon, $color) {
+//   &:before {
+//     color: $color;
+//     content: $icon;
+//     font: normal normal normal 18px FontAwesome;
+//     padding-right: 10px;
+//     text-rendering: auto;
+//     -webkit-font-smoothing: antialiased;
+//   }
+// }
+
+@mixin font-awesome($icon, $color, $size, $padding) {
   &:before {
     color: $color;
     content: $icon;
-    font: normal normal normal 18px FontAwesome;
-    padding-right: 10px;
+    font: normal normal normal $size FontAwesome;
+    padding-right: $padding;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
   }
@@ -96,31 +107,34 @@
   }
 }
 
+@mixin padding-block-width($size) {
+  padding-left: $size;
+  padding-right: $size;
+}
+@mixin padding-block-height($size) {
+  padding-bottom: $size;
+  padding-top: $size;
+}
+
 @mixin padding-small-block-width {
-  padding-left: $yelo-padding-small-block-width;
-  padding-right: $yelo-padding-small-block-width;
+  @include padding-block-width($yelo-padding-small-block-width);
 }
 @mixin padding-small-block-height {
-  padding-bottom: $yelo-padding-small-block-height;
-  padding-top: $yelo-padding-small-block-height;
+  @include padding-block-height($yelo-padding-small-block-height);
 }
 
 @mixin padding-medium-block-width {
-  padding-left: $yelo-padding-medium-block-width;
-  padding-right: $yelo-padding-medium-block-width;
+  @include padding-block-width($yelo-padding-medium-block-width);
 }
 @mixin padding-medium-block-height {
-  padding-bottom: $yelo-padding-medium-block-height;
-  padding-top: $yelo-padding-medium-block-height;
+  @include padding-block-height($yelo-padding-medium-block-height);
 }
 
 @mixin padding-large-block-width {
-  padding-left: $yelo-padding-large-block-width;
-  padding-right: $yelo-padding-large-block-width;
+  @include padding-block-width($yelo-padding-large-block-width);
 }
 @mixin padding-large-block-height {
-  padding-bottom: $yelo-padding-large-block-height;
-  padding-top: $yelo-padding-large-block-height;
+  @include padding-block-height($yelo-padding-large-block-height);
 }
 
 @mixin opacity($opacity) {
@@ -137,4 +151,16 @@
   background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
   background-image:         linear-gradient(top, $fromColor, $toColor);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
+
+
+@mixin first-color-stripe {
+  background-color: $yelo-first-color;
+  font-size: 12px;
+  // margin-top: 12px;
+  // text-transform: uppercase;
+  @include bg-stripe;
+  @include padding-small-block-height;
+  @include padding-small-block-width;
 }

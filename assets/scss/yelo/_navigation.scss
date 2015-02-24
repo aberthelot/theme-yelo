@@ -51,7 +51,7 @@ $height-logo: 140px;
     // @include linear-gradient($yelo-color-gray-lighter, $yelo-color-white);
 
 
-    @include bg-stripe;
+    // @include bg-stripe;
     background-repeat: repeat;
     border: 0;
     // height: 60px;
@@ -112,7 +112,8 @@ ul.dropdown-menu {
   background-color: inherit;
   // border-bottom: 4px solid $yelo-color-yellow;
   color: $yelo-color-black;
-  @include bg-stripe-darker;
+  @include bg-stripe;
+  // @include bg-stripe-darker;
 }
 
 

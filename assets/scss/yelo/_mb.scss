@@ -71,7 +71,7 @@
 }
 
 .mb-line-button {
-  @include font-awesome($fa-search, $yelo-color-white);
+  @include font-awesome($fa-search, $yelo-color-white, 18px, 10px);
   &:before {
     display: inline;
     padding-right: 0;
@@ -253,20 +253,20 @@ li.mb-mode {
 #mb-results-infos-hourdeparture,
 #mb-resume-departure {
   span:first-child {
-    @include font-awesome($fa-flag-checkered, $yelo-color-red);
+    @include font-awesome($fa-flag-checkered, $yelo-color-red, 18px, 10px);
   }
 }
 
 #mb-results-infos-hourarrival,
 #mb-resume-arrival {
   span:first-child {
-    @include font-awesome($fa-flag, $yelo-color-green);
+    @include font-awesome($fa-flag, $yelo-color-green, 18px, 10px);
   }
 }
 
 #mb-results-infos-totalduration {
   span {
-    @include font-awesome($fa-clock-o, $yelo-color-black);
+    @include font-awesome($fa-clock-o, $yelo-color-black, 18px, 10px);
   }
 }
 
@@ -289,12 +289,12 @@ li.mb-mode {
 
 #mb-departure-field {
   legend {
-    @include font-awesome($fa-flag, $yelo-color-green);
+    @include font-awesome($fa-flag, $yelo-color-green, 18px, 10px);
   }
 }
 
 #mb-destination-field {
   legend {
-    @include font-awesome($fa-flag-checkered, $yelo-color-red);
+    @include font-awesome($fa-flag-checkered, $yelo-color-red, 18px, 10px);
   }
 }

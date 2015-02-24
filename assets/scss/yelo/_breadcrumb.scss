@@ -1,0 +1,34 @@
+.breadcrumbs {
+  font-family: $open;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  .cdalr-breadcrumbs-you-are-here {
+    color: $yelo-color-black;
+    font-size: 10px;
+  }
+  .cdalr-breadcrumbs-items {
+    color: $yelo-color-gray-normal;
+    font-size: 12px;
+    a {
+      color: $yelo-color-gray-normal;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    span {
+      @include font-awesome($fa-angle-right, $yelo-color-black, 12px, 4px);
+      @include padding-block-width(4px);
+      &:last-child {
+        color: $yelo-color-black;
+        a {
+          @include first-color-stripe;
+          @include padding-small-block-height;
+          @include padding-small-block-width;
+          color: $yelo-color-black;
+        }
+      }
+    }
+  }
+}
