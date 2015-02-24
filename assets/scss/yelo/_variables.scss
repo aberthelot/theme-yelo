@@ -13,10 +13,11 @@ $yelo-color-gray-normal: #777777;
 $yelo-color-gray-harder: #494949;
 $yelo-color-gray-hardest: #333333;
 //
-$yelo-color-gray-blue-annex: $color-blue-1;
 $color-blue-1: #a6c4d7; 
 $color-blue-2: #94b3c7;
 $color-blue-3: #94b3c7;
+//
+$yelo-color-gray-blue-annex: $color-blue-1;
 
 //
 $yelo-first-color: $yelo-color-yellow;
@@ -70,6 +71,10 @@ $fa-caret-down: "\f0d7";
 $fa-caret-left: "\f0d9";
 $fa-caret-up: "\f0d8";
 $fa-caret-right: "\f0da";
+$fa-chevron-down: "\f078";
+$fa-chevron-left: "\f053";
+$fa-chevron-up: "\f077";
+$fa-chevron-right: "\f054";
 $fa-clock-o: "\f017";
 $fa-info-circle: "\f05a";
 $fa-history: "\f1da";

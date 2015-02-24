@@ -1,4 +1,9 @@
 
+#mb-iti-search-form {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 
 .mb-result-head-1,
 #mb-pagin-top h3 {
@@ -8,7 +13,7 @@
 }
 .mb-bloc-inline-fields {
   font-family: $text-strong;
-  font-size: 13px;
+  font-size: calculate-rem(13px);
   text-transform: capitalize;
 
   @media (min-width: 768px) {
@@ -45,27 +50,18 @@
     display: inline-block;
   }
   
-  
-  // position: absolute;
-  // right: 20px;
+
   text-transform: none;
   @include padding-medium-block-width;
   @include padding-medium-block-height;
   @include border-radius($yelo-border-radius);
-
-  // &:hover {
-  //   text-decoration: none;
-  // }
   line-height: 28px;
-  
-  // width: 100%;
-
   #mb-iti-search-btn {
     background-color: $yelo-color-black;
     border: 0;
     color: $yelo-color-white;
     font-family: $text-strong;
-    font-size: 18px;
+    font-size: calculate-rem(18px);
     padding: 0;
   }
 }
@@ -82,16 +78,14 @@
 	legend {
     border-bottom: 0px;
     font-family: $text-strong;
-    font-size: 1rem;
-    line-height: 2.5rem;
-    // height: 60px;
+    font-size: calculate-rem(16px);
+    line-height: calculate-rem(40px);
     @include separate-bg-stripe;
-    // background-color: $yelo-color-gray-lighter;
   }
   label {
     color: #717171;
     font-family: $text-strong;
-    font-size: 0.8rem;
+    font-size: calculate-rem(12px);
     font-style: italic;
     line-height: 0.8rem;
   }
@@ -100,9 +94,9 @@
 .mandatory-info {
   color: #717171;
   font-family: $text;
-  font-size: 0.8rem;
+  font-size: calculate-rem(12px);
   font-style: italic;
-  line-height: 0.8rem;
+  line-height: calculate-rem(12px);
 }
 
 #mb-resume-content {
@@ -119,7 +113,7 @@ ul.mb-results-misc {
   @include list-unstyled;
   color: $yelo-color-gray-harder;
   font-family: $text;
-  font-size: 13px;
+  font-size: calculate-rem(13px);
   span {
     color: $yelo-color-gray-hardest;
     font-family: $text-strong;
@@ -147,7 +141,6 @@ ul.mb-results-misc {
     }
     .mb-results-list-next {
       text-align: right;
-      // right: 0;
     }
   }
   h2, h3 {
@@ -158,28 +151,22 @@ ul.mb-results-misc {
   h2 {
     background-color: $yelo-first-color;
     background-image: find-img("bg-stripe.png");
-    font-size: 22px;
+    font-size: calculate-rem(22px);
   }
 }
 
 
 ul#mb-search-results-list {
   li.mb-search-result {
-  @include padding-medium-block-width;
-  @include padding-medium-block-height;
     background-color: $yelo-color-gray-lightest;
     background-image: find-img("bg-stripe.png");
-    // border: 1px dotted $yelo-color-gray-harder;
     margin-bottom: 24px;
-    // @include li-alternate-color($yelo-list-color-light-even, $yelo-list-color-light-odd);
-
+    @include padding-medium-block-width;
+    @include padding-medium-block-height;
     ul.mb-results-modes {
       li.mb-mode {
         display: inline-block;
       }
-    }
-    ul.mb-results-infos {
-      
     }
     p {
       margin-bottom: 0;
@@ -219,14 +206,8 @@ ul#mb-search-results-list {
 
 li.mb-mode {
   &:not(:last-child) {
-    // background-color: pink;
     &:after {
-      font: normal normal normal 14px FontAwesome;
-      padding-left: 4px;
-      padding-right: 4px;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      content: "\f054";
+      @include font-awesome($fa-chevron-right, $yelo-color-red, 14px, 4px);
     }
   }
 }
@@ -235,7 +216,7 @@ li.mb-mode {
 .mb-result-actions {
   background-color: $yelo-color-black;
   font-family: $text-strong;
-  font-size: 16px;
+  font-size: calculate-rem(16px);
   text-align: center;
   @include padding-medium-block-width;
   @include padding-medium-block-height;
@@ -244,35 +225,46 @@ li.mb-mode {
     display: inline-block;
     text-decoration: none;
     &:hover {
-      // background-color: $yelo-color-gray-lighter;
       color: $yelo-color-gray-normal;
     }
   }
 }
 
+
+/********************/
+/* Ajout des icônes par défaut
+/********************/
 #mb-results-infos-hourdeparture,
 #mb-resume-departure {
   span:first-child {
     @include font-awesome($fa-flag-checkered, $yelo-color-red, 18px, 10px);
   }
 }
-
 #mb-results-infos-hourarrival,
 #mb-resume-arrival {
   span:first-child {
     @include font-awesome($fa-flag, $yelo-color-green, 18px, 10px);
   }
 }
-
 #mb-results-infos-totalduration {
   span {
     @include font-awesome($fa-clock-o, $yelo-color-black, 18px, 10px);
   }
 }
-
-#mb-resume-content {
-  // background-color: red;
+#mb-departure-field {
+  legend {
+    @include font-awesome($fa-flag, $yelo-color-green, 18px, 10px);
+  }
 }
+#mb-destination-field {
+  legend {
+    @include font-awesome($fa-flag-checkered, $yelo-color-red, 18px, 10px);
+  }
+}
+
+
+
+
 
 @media (min-width: 768px) {
 
@@ -287,14 +279,3 @@ li.mb-mode {
 
 }
 
-#mb-departure-field {
-  legend {
-    @include font-awesome($fa-flag, $yelo-color-green, 18px, 10px);
-  }
-}
-
-#mb-destination-field {
-  legend {
-    @include font-awesome($fa-flag-checkered, $yelo-color-red, 18px, 10px);
-  }
-}
