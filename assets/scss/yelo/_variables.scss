@@ -40,11 +40,12 @@ $rss-color: #F26522;
 
 
 
-$baseFontSize: 16px;
+$yelo-baseFontSize: 14px;
 
 /********************/
 /*     SURCHARGES BOOTSTRAP
 /********************/
+$baseFontSize: $yelo-baseFontSize !default;
 $baseFontFamily: $text !default;
 $linkColor: $yelo-color-black;
 // $headingsColor: green;
@@ -57,12 +58,12 @@ $yelo-padding-medium-block-height: 4px;
 $yelo-padding-large-block-width: 12px;
 $yelo-padding-large-block-height: 12px;
 
-$yelo-margin-small-block-width: 6px;
+$yelo-margin-small-block-width: 4px;
 $yelo-margin-small-block-height: 2px;
-$yelo-margin-medium-block-width: 12px;
+$yelo-margin-medium-block-width: 8px;
 $yelo-margin-medium-block-height: 4px;
 $yelo-margin-large-block-width: 12px;
-$yelo-margin-large-block-height: 12px;
+$yelo-margin-large-block-height: 6px;
 
 
 $fa-angle-right: "\f105";

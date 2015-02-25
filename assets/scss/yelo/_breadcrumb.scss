@@ -16,18 +16,19 @@
     }
     span {
       white-space: nowrap;
-      @include font-awesome($fa-angle-right, $yelo-color-black, calculate-rem(12px), 4px);
+      // @include font-awesome($fa-angle-right, $yelo-color-black, calculate-rem(12px), 4px);
       @include padding-block-width(4px);
-      &:last-child {
-        color: $yelo-color-black;
-        a {
-          color: inherit;
+      a {
+        color: inherit;
+        @include margin-medium-block-width;
+      }
+      &:last-child a {
+          color: $yelo-color-black;
           font-size: inherit;
           @include first-color-stripe;
           @include padding-small-block-height;
           @include padding-small-block-width;
         }
-      }
     }
   }
 }

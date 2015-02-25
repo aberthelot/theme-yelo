@@ -33,7 +33,7 @@ h2.cdalr-toggle-bar-title .open{
 
 .journal-content-article {
   font-family: $text;
-  h3 {
+  h1, h2, h3 {
     font-family: $title;
     font-size: calculate-rem(20px);
   }

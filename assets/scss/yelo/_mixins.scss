@@ -194,7 +194,26 @@
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
 }
 
+/********************/
+/*     TAGS
+/********************/
 
+@mixin tag-color($color)  {
+  background-color: $color;
+  font-size: 12px;
+  margin-top: 12px;
+  text-transform: uppercase;
+  @include bg-stripe;
+  @include padding-small-block-height;
+  @include padding-small-block-width;
+  @media (min-width: 768px) {
+    margin-top: 0px;
+  }
+}
+
+@mixin first-tag {
+  @include tag-color($yelo-first-color);
+}
 
 /********************/
 /*     BACKGROUNDS

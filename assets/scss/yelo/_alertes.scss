@@ -1,0 +1,128 @@
+
+/********************/
+/*  Affichage des alertes pour la page les listant toutes
+/********************/
+
+.yelo-toutes-les-alertes-entry + .yelo-toutes-les-alertes-entry {
+    border-top: 1px solid $yelo-color-gray-lighter;
+}
+
+.yelo-toutes-les-alertes-entry {
+  @include padding-large-block-height;
+  
+  .alerte-category {
+    display: inline-block;
+    @include first-tag;
+  }
+
+  .alerte-date, .alerte-place {
+    display: inline-block;
+  }  
+
+  .alerte-date {
+    font-family: $text-strong;
+    font-size: calculate-rem(11px);
+    @include padding-medium-block-height;
+  }
+
+  .alerte-place {
+    font-family: $text;
+    color: $yelo-color-gray-normal;
+    font-size: calculate-rem(11px);
+    @include padding-medium-block-height;
+  }
+
+  .alerte-title {
+    color: $yelo-color-gray-hardest;
+    font-family: $text-strong;
+    font-size: calculate-rem(14px);
+    @include padding-medium-block-height;
+  }
+
+  .alerte-description {
+    font-family: $text;
+    font-size: calculate-rem(12px);
+    @include padding-large-block-height;
+  }
+}
+
+
+/********************/
+/*  Affichage des alertes pour la page d'accueil
+/********************/
+
+.yelo-widget-alertes-accueil-wrap {
+  background-color: $yelo-color-gray-lightest;
+  font-family: $text;
+  font-size: calculate-rem(10px);
+  @include bg-stripe;
+  @include border-radius($yelo-border-radius);
+
+  header {
+    height: calculate-rem(20px);
+    h1, h2, h3, h4, h5, h6 {
+      color: $yelo-color-gray-hardest;
+      font-family: $title;
+      font-size: calculate-rem(18px);
+      // positionnement au dessus du bloc
+      position: relative;
+      bottom: calculate-rem(20px);
+      // margin-bottom: 0;
+      padding: 0;
+    }
+  }
+
+  .fa-stack {
+    color: $yelo-color-yellow;
+    .fa-inverse {
+      color: $yelo-color-black;
+    }
+  }
+
+  .yelo-widget-alertes-accueil-entry-item {
+    background-color: $yelo-color-white;
+    @include padding-large-block-height;
+    @include padding-large-block-width;
+    @include margin-large-block-height;
+    @include margin-small-block-width;
+
+    .yelo-widget-alertes-accueil-entry-item-title,
+    .alerte-place {
+      color: $yelo-color-gray-hardest;
+      font-family: $text-strong;
+      font-size: calculate-rem(12px);
+      @include padding-medium-block-height;
+    }
+
+    .yelo-widget-alertes-accueil-entry-item-description {
+      @include teasing;
+    }
+  }
+  .yelo-widget-accueil-link-bar {
+    font-size: calculate-rem(9px);
+    @include margin-small-block-width;
+    .yelo-widget-accueil-link {
+      text-align: right;
+      @include padding-medium-block-height;
+      a {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+
+
+
+.infos-trafic {
+  // section {
+  //   margin: 0;
+  // }
+  // p {
+  //   color: $yelo-color-gray-harder;
+  //   font-family: $text;
+  //   font-size: 12px;
+  //   margin: 0;
+  //   padding: 0;
+  // }
+}
