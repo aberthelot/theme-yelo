@@ -1,3 +1,65 @@
+.link-more {
+  font-family: $text;
+  font-size: calculate-rem(12px);
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.yelo-tag {
+  @include first-tag;
+}
+
+.date-publication {
+  color: $yelo-color-gray-harder;
+  font-family: $text;
+  font-size: calculate-rem(11px);
+  @include padding-medium-block-height;
+}
+
+.accroche {
+  color: $yelo-color-gray-normal;
+}
+
+.description {
+  @include padding-medium-block-height;
+}
+
+footer.yelo-primary {
+  background-color: $yelo-first-color;
+  height: 30px;
+  line-height: 2rem;
+  position: relative;
+  @include bg-stripe;
+  @include border-radius-bottom-left($yelo-border-radius);
+  @include padding-medium-block-width;
+  a {
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+  a.btn-yelo {
+    background-color: $yelo-color-black;
+    bottom: 0;
+    color: $yelo-color-white;
+    font-family: $text-strong;
+    font-size: 18px;
+    position: absolute;
+    right: 20px;
+    text-transform: none;
+    @include padding-medium-block-width;
+    @include padding-medium-block-height;
+    @include border-radius-top($yelo-border-radius);
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+
 
 
 // Portlet pour les liens directs collés aux services Compte Unique ------------------ //
@@ -271,35 +333,7 @@ ul.list-delimited-light {
     padding-left: 4px;
     position: relative;
   }
-  footer {
-    background-color: $yelo-first-color;
-    height: 30px;
-    line-height: 2rem;
-    position: relative;
-    @include bg-stripe;
-    @include border-radius-bottom-left($yelo-border-radius);
-    @include padding-medium-block-width;
-    a {
-      font-size: 11px;
-      text-transform: uppercase;
-    }
-    a.btn-yelo {
-      background-color: $yelo-color-black;
-      bottom: 0;
-      color: $yelo-color-white;
-      font-family: $text-strong;
-      font-size: 18px;
-      position: absolute;
-      right: 20px;
-      text-transform: none;
-      @include padding-medium-block-width;
-      @include padding-medium-block-height;
-      @include border-radius-top($yelo-border-radius);
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
+
 }
 
 .block-secondary {
@@ -355,19 +389,6 @@ ul.list-delimited-light {
   }
 }
 
-.tags {
-  background-color: $yelo-first-color;
-  font-size: 12px;
-  margin-top: 12px;
-  text-transform: uppercase;
-  @include bg-stripe;
-  @include padding-small-block-height;
-  @include padding-small-block-width;
-  @media (min-width: 768px) {
-    margin-top: 0px;
-  }
-}
-
 section {
   margin-bottom: 30px;
   margin-top: 30px;
@@ -407,20 +428,7 @@ section {
   }
 }
 
-.news {
-  background-color: $yelo-color-gray-lightest;
-  h4 {
-    color: $yelo-color-gray-hardest;
-    font-family: $title;
-    font-size: 16px;
-  }
-  p.teasing {
-    color: $yelo-color-gray-harder;
-    font-family: $text;
-    font-size: 12px;
-  }
 
-}
 
 #picto-bus {
   background: find-img("picto-bus.svg") no-repeat center center;
@@ -431,10 +439,4 @@ section {
   @include teasing;
 }
 
-.fa-facebook {
-  color: $facebook-color;
-}
 
-.fa-rss {
-  color: $rss-color;
-}
