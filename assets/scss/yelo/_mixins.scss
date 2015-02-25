@@ -235,3 +235,13 @@
 @mixin second-color-stripe {
   @include bg-color-stripe($yelo-second-color);
 }
+
+/********************/
+/* LISTS
+/********************/
+@mixin list-unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+

@@ -27,6 +27,10 @@
   @include padding-medium-block-height;
 }
 
+.description-container {
+  @include padding-large-block-height;
+}
+
 footer.yelo-primary {
   background-color: $yelo-first-color;
   height: 30px;

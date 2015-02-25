@@ -1,4 +1,31 @@
 
+/********************/
+/*  Affichage pour le détail d'une actualité
+/********************/
+.actualite-detail {
+  font-family: $text;
+  font-size: calculate-rem(12px);
+
+  h1 {
+
+  }
+  
+  .description-container {
+    h1, h2, h3, h4, h5, h6 {
+      color: $yelo-color-gray-hardest;
+      font-family: $title;
+      font-size: calculate-rem(16px);
+      line-height: calculate-rem(18px);
+      @include padding-small-block-height;
+      @include margin-small-block-height;
+    }
+  }
+}
+
+
+
+
+
 .yelo-actualites-liste-entry + .yelo-actualites-liste-entry {
     border-top: 1px solid $yelo-color-gray-lighter;
 }
@@ -13,7 +40,7 @@
   .actu-desc-grand-container {
     h1, h2, h3, h4, h5, h6 {
       color: $yelo-color-gray-hardest;
-      font-family: $text-strong;
+      font-family: $title;
       font-size: calculate-rem(16px);
       line-height: calculate-rem(18px);
       @include padding-small-block-height;

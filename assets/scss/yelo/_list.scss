@@ -1,0 +1,35 @@
+/********************/
+/*  Affichage pour les listes
+/********************/
+
+ul.list-focus {
+  
+  @include list-unstyled;
+
+  li {
+    @include font-awesome($fa-var-arrow-right, $yelo-first-color, calculate-rem(12px), 6px)
+  }
+  // margin: 0;
+  // padding: 0;
+  // list-style: none;
+
+  // // margin: 0;
+  // margin-bottom: 0px;
+  // margin-left: 4px;
+  // margin-right: 4px;
+  // > li {
+  //   @include padding-medium-block-width;
+  //   @include padding-large-block-height;
+  //   margin: 0;
+  //   background-color: $yelo-color-white;
+  //   // @include li-alternate-color ($yelo-list-color-light-even, $yelo-list-color-light-odd);
+    
+  //   &:not(:last-child) {
+  //     margin-bottom: 8px;
+  //     // @include separate-bg-stripe;
+  //     // border-top: 1px dotted $yelo-color-black;
+  //   }
+  //   // @include li-separate-color ($yelo-list-border-color-light-even, $yelo-list-border-color-light-odd);
+  // }
+}
+

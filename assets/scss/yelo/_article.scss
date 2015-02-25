@@ -48,7 +48,7 @@ h2.cdalr-toggle-bar-title .open{
       @include margin-large-block-height;
     }
     li {
-      @include font-awesome($fa-caret-right, $yelo-first-color, calculate-rem(18px), 4px);
+      @include font-awesome($fa-var-caret-right, $yelo-first-color, calculate-rem(18px), 4px);
     }
   }
   .cdalr-ckeditor-legend {
@@ -57,7 +57,7 @@ h2.cdalr-toggle-bar-title .open{
     font-size: calculate-rem(12px);
     position: relative;
     @include padding-large-block-height;
-    @include font-awesome($fa-caret-down, $yelo-first-color, calculate-rem(36px), 0);
+    @include font-awesome($fa-var-caret-down, $yelo-first-color, calculate-rem(36px), 0);
     &:before {
       position: absolute;
       left: 10px;

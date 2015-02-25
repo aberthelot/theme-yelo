@@ -3,118 +3,193 @@
 
 // Navigation principale ------------------ //
 
-header.main {
-  // background-color: $yelo-color-gray-lightest;
+header.main-navigation {
+  background-color: $yelo-color-gray-lightest;
   background-color: inherit;
   height: 180px;
   position: relative;
   width: 100%;
   // z-index: 200;
-  // @include bg-stripe;
-}
+  @include bg-stripe;
 
-.testalvin {
-  // text-align: center;
-  // max-width: 100%;
-  img {
+
+  .logo {
     position: absolute;
-    right: 0;
-    left:0;
-    // left: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    // top: -40px;
-    // z-index: 2;
+    left: 0;
+    top: -80px;
   }
-}
 
-$height-logo: 140px;
-
-.navbar .navbar-inner {
+  .bg-header {
     // text-align: center;
-    // margin: 0 auto;
+    // max-width: 100%;
+    img {
+      position: absolute;
+      right: -60px;
+      // left:0;
+      // left: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      // top: -40px;
+      // z-index: 2;
+    }
+  }
+
+  .navbar {
+    margin-top: 180px;
+    position: relative;
+  }
+
 }
 
-// .navbar .navbar-inner .nav {
-//     display:inline-block;
-//     float: none;
-// }
 
-.navbar {
-  border-bottom: 4px solid $yelo-color-gray-lightest;
-  border-top: 4px solid $yelo-color-gray-lightest;
-  // margin-top: $height-logo;
-  margin-bottom: 60px;
-  .navbar-inner {
-    // background-color: $yelo-color-gray-lighter;
+// @media (max-width: 767px) {
+  .yelo-navbar {
 
-    // @include linear-gradient($yelo-color-gray-lighter, $yelo-color-white);
+    $height-logo: 140px;
 
+    .navbar {
+      margin-bottom: 60px;
 
-    // @include bg-stripe;
-    background-repeat: repeat;
-    border: 0;
-    // height: 60px;
-    // padding-top: 30px;
-    @include border-radius(0);
-    @media (min-width: 768px) {
-      // padding-left: 0;
-    }
-    .container {
+      .navbar-inner {
+        background-color: $yelo-color-white;
+        box-shadow: none;
 
-      .brand {
-        margin-top: -$height-logo;
-        padding: 0;
-        position: absolute;
-      }
-      .nav-collapse {
-        @media (min-width: 768px) {
-          // padding-left: 200px;
+        .nav {
+          > li {
+            text-align: right;
+            border-top: 1px solid $yelo-color-gray-lighter;
+            > a {
+              color: $yelo-color-black;
+              font-family: $text-strong;
+              font-size: 18px;
+              &:hover, &:focus {
+                background-color: inherit;
+              }
+            }
+          }
+
+          li.dropdown.open .dropdown-menu {
+            a {
+              &:hover, &:focus {
+                background-color: $yelo-first-color;
+                background-image: none;
+                color: inherit;
+              }
+            }
+          }
+
+          li.dropdown.open > .dropdown-toggle,
+          li.dropdown.active > .dropdown-toggle,
+          li.dropdown.open.active > .dropdown-toggle {
+            // background-color: $yelo-color-yellow;
+            // z-index: -1;
+            // background-color: $yelo-color-gray-lightest;
+            background-color: inherit;
+            color: $yelo-color-black;
+            @include bg-stripe;
+            // @include bg-stripe-darker;
+
+          }
+
         }
       }
-      ul.nav > li > a {
-        color: $yelo-color-black;
-        font-family: $text-strong;
-        font-size: 18px;
-        // border-bottom: 4px solid inherit;
+    }
+
+
+    .logo-mini {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+
+      
+
+    .navbar-inner {
+      background-image: none;
+      background-repeat: repeat;
+      border: 0;
+      // height: 60px;
+      // padding-top: 30px;
+      @include border-radius(0);
+
+      .container {
+
+        .brand {
+          margin-top: -$height-logo;
+          padding: 0;
+          position: absolute;
+        }
+        .nav-collapse {
+          @media (min-width: 768px) {
+            // padding-left: 200px;
+          }
+        }
+      }
+    }
+  }
+// }
+
+
+
+  .navbar .nav > li > .dropdown-menu {
+    &:after, &:before {
+      display: none;
+    }
+  }
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+  .yelo-navbar {
+    .navbar {
+      border-bottom: 4px solid $yelo-color-gray-lightest;
+      border-top: 4px solid $yelo-color-gray-lightest;
+    }
+  }
+}
+
+@media (min-width: 980px) {
+  .yelo-navbar {
+    .navbar {
+      .navbar-inner {
+        .nav {
+          > li {
+            text-align: left;
+            border: 0;
+          }
+        }
+      }
+    }
+
+    li.dropdown.open ul.dropdown-menu {
+      background-color: $yelo-color-gray-lightest;
+      @include bg-stripe;
+      li > a {
+        font-family: $text;
+        font-size: 12px;
+        text-transform: uppercase;
+        &:hover, &:focus {
+          background-color: $yelo-color-yellow;
+          background-image: none;
+          color: $yelo-color-black;
+        }
       }
     }
   }
 }
 
-ul.dropdown-menu {
-  background-color: $yelo-color-gray-lightest;
-  @include bg-stripe;
-  li > a {
-    font-family: $text;
-    font-size: 12px;
-    text-transform: uppercase;
-    &:hover, &:focus {
-      background-color: $yelo-color-yellow;
-      background-image: none;
-      color: $yelo-color-black;
-    }
-  }
-}
 
-.navbar .nav > li > .dropdown-menu {
-  &:after, &:before {
-    display: none;
-  }
-}
 
-.navbar .nav li.dropdown.open > .dropdown-toggle,
-.navbar .nav li.dropdown.active > .dropdown-toggle,
-.navbar .nav li.dropdown.open.active > .dropdown-toggle {
-  // background-color: $yelo-color-yellow;
-  // z-index: -1;
-  // background-color: $yelo-color-gray-lightest;
-  background-color: inherit;
-  // border-bottom: 4px solid $yelo-color-yellow;
-  color: $yelo-color-black;
-  @include bg-stripe;
-  // @include bg-stripe-darker;
-}
+
+
+
+
+
 
 
 
