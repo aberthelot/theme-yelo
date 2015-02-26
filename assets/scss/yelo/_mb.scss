@@ -1,7 +1,11 @@
 
 #mb-iti-search-form {
+  font-family: $text;
   overflow: hidden;
   white-space: nowrap;
+  p {
+
+  }
 }
 
 
@@ -41,7 +45,7 @@
 .mb-line-button {
 
   background-color: $yelo-color-black;
-
+  color: $yelo-color-gray-lighter;
   
 
   
@@ -56,7 +60,7 @@
   @include padding-medium-block-height;
   @include border-radius($yelo-border-radius);
   line-height: 28px;
-  #mb-iti-search-btn {
+  #mb-iti-search-btn, .mb-link {
     background-color: $yelo-color-black;
     border: 0;
     color: $yelo-color-white;
@@ -157,6 +161,7 @@ ul.mb-results-misc {
 
 
 ul#mb-search-results-list {
+  height: auto;
   li.mb-search-result {
     background-color: $yelo-color-gray-lightest;
     background-image: find-img("bg-stripe.png");
