@@ -321,9 +321,6 @@ ul.list-delimited-light {
 
   header {
     border-radius: 10px 0 0 0;
-  }
-
-  header {
     border-top: 4px solid $yelo-light-color;
     border-left: 4px solid $yelo-light-color;
   }
@@ -336,7 +333,9 @@ ul.list-delimited-light {
     padding-left: 4px;
     position: relative;
   }
-
+  h3.mask {
+    background-color: $yelo-color-white;
+  }
 
 
   header.corner {
