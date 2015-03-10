@@ -312,8 +312,6 @@ ul.list-delimited-light {
 
 
 
-
-
 .block-primary {
   border-radius: 10px 0 0 0;
   color: $yelo-color-gray-hardest;
@@ -337,7 +335,35 @@ ul.list-delimited-light {
     padding-left: 4px;
     position: relative;
   }
-
+  footer {
+    background-color: $yelo-first-color;
+    height: 30px;
+    line-height: 2rem;
+    position: relative;
+    @include bg-stripe;
+    @include border-radius-bottom-left($yelo-border-radius);
+    @include padding-medium-block-width;
+    a {
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+    a.btn-yelo {
+      background-color: $yelo-color-black;
+      bottom: 0;
+      color: $yelo-color-white;
+      font-family: $text-strong;
+      font-size: 18px;
+      position: absolute;
+      right: 20px;
+      text-transform: none;
+      @include padding-medium-block-width;
+      @include padding-medium-block-height;
+      @include border-radius-top($yelo-border-radius);
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .block-secondary {
