@@ -75,10 +75,6 @@ footer.yelo-primary {
   margin-top: 0;
   @include border-radius-bottom-left($yelo-border-radius);
 
-  // @media (min-width: 768px) {
-  //   margin-bottom: 30px;
-  //   margin-top: 30px;
-  // }
 
   header {
     &:not(:first-child) {
@@ -121,62 +117,10 @@ footer.yelo-primary {
       font-size: 14px;
     }
   }
-
-  // .services li {
-  //   box-sizing: border-box;
-  //   padding: 1em;
-  //   margin: 0 auto;
-  //   width: 25%;
-    
-  //   div.circle {
-  //     float: left;
-  //     line-height: 1em;
-  //     margin-top: -0.5em;
-  //     padding-top: 50%;
-  //     text-align: center;
-  //     width: 100%;
-  //   }
-  //   div.circle-img {
-  //     background: $yelo-first-color;
-  //     font-size: 2em;
-  //     height: 0;
-  //     padding-bottom: 100%;
-  //     text-align: center;
-  //     width: 100%;
-  //     @include border-radius(50%);
-  //   }
-  //   div.circle-txt {
-  //     font-family: $openB;
-  //     font-size: 1rem;
-  //     line-height: 1rem;
-  //     padding-top: 0.4rem;
-  //     text-align: center;
-  //   }
-  // }
-  // a {
-
-  // }
 }
 
-
-// ------------------ //
-// ------------------ //
-// ------------------ //
-// ------------------ //
-// ------------------ //
-
-
-
-
-
-
-
-
 body {
-  // background-color: green;
   background-color: $yelo-color-white;
-  // background-color: $yelo-color-gray-lightest;
-  // @include bg-stripe;
 }
 
 @media (max-width: 767px) {
@@ -225,8 +169,6 @@ body {
   .container {
     
     color: $yelo-color-gray-lightest;
-    // @include padding-medium-block-width;
-    // @include padding-large-block-height;
     a {
       color: inherit;
       font-size: 11px;
@@ -238,13 +180,6 @@ body {
     }
     
   }
-
-  // .fa {
-  //   font-size: 14px;
-  // }
-  // .row > .span4 {
-  //   border-right: 4px solid $yelo-color-gray-lightest;
-  // }
 }
 
 
@@ -264,24 +199,12 @@ ul.list-delimited-light {
     @include padding-large-block-height;
     margin: 0;
     background-color: $yelo-color-white;
-    // @include li-alternate-color ($yelo-list-color-light-even, $yelo-list-color-light-odd);
     
     &:not(:last-child) {
       margin-bottom: 8px;
-      // @include separate-bg-stripe;
-      // border-top: 1px dotted $yelo-color-black;
     }
-    // @include li-separate-color ($yelo-list-border-color-light-even, $yelo-list-border-color-light-odd);
   }
 }
-
-// ul.list-alternate > li {
-//   @include li-alternate-color ($yelo-list-color-light-even, $yelo-list-color-light-odd);
-// }
-
-// ul.list-separate > li {
-//   @include li-separate-color ($yelo-list-border-color-light-even, $yelo-list-border-color-light-odd);
-// }
 
 .block-quick {
   h3 {
@@ -392,11 +315,7 @@ ul.list-delimited-light {
     font-size: 18px;
     margin-bottom: 0;
     @include padding-medium-block-width;
-  // }
-
-  // h3 {
     bottom: 20px;
-    // left: -6px;
     padding: 0;
     position: relative;
   }
@@ -407,7 +326,6 @@ ul.list-delimited-light {
   }
   footer {
     background-color: $yelo-light-color;
-    // border-top: 4px solid $yelo-color-white;
     line-height: 2rem;
     text-align: right;
     @include bg-stripe;
@@ -439,7 +357,6 @@ ul.list-delimited-light {
 section {
   margin-bottom: 30px;
   margin-top: 30px;
-  // border: 1px solid $yelo-light-color;
 }
 
 .bg-stripe {
@@ -447,25 +364,13 @@ section {
 }
 
 .search-travel {
-  // background-color: $yelo-color-gray-lightest;
-  // padding-left: 4px;
-  // padding-right: 4px;
   > p {
     @include padding-medium-block-width;
-  }
-  div {
-    // background-color: $yelo-color-white;
   }
 }
 
 .accounts {
   background-color: $yelo-color-gray-lightest;
-  // h3 {
-  //   bottom: 20px;
-  //   left: -6px;
-  //   padding: 0;
-  //   position: relative;
-  // }
   p {
     color: $yelo-color-gray-hardest;
     font-family: $text;
@@ -482,7 +387,6 @@ section {
 }
 
 .teasing {
-  // padding: 0;
   @include teasing;
 }
 
